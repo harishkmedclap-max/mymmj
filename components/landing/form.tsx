@@ -5,18 +5,18 @@ import formicon from "@/public/assets/form-top-icon.png";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {formSchema} from "@/lib/formSchema"
+import {FormSchemaType, formSchema} from "@/lib/formSchema"
 
 export default function Form() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm({
+    formState: { errors },
+  } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: FormSchemaType) => {
     try {
       console.log("Form Data:", data);
 
