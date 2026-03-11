@@ -11,7 +11,7 @@ export default function Form() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
   });
@@ -41,7 +41,7 @@ export default function Form() {
         <div className="form_group">
           <label>Full Name *</label>
           <input {...register("name")} placeholder="Enter your name" />
-          {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
+          {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
         </div>
 
         <div className="form_group">
