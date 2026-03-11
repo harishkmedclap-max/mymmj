@@ -5,12 +5,12 @@ import formicon from "@/public/assets/form-top-icon.png";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {FormSchemaType, formSchema} from "@/lib/formSchema"
+import { FormSchemaType, formSchema } from "@/lib/formSchema";
 
 export default function Form() {
   const {
     register,
-    handleSubmit, 
+    handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
@@ -19,7 +19,6 @@ export default function Form() {
   const onSubmit = (data: FormSchemaType) => {
     try {
       console.log("Form Data:", data);
-
       alert("Application submitted!");
     } catch (error) {
       console.error(error);
@@ -29,52 +28,111 @@ export default function Form() {
   return (
     <div className="hero_form_wrap">
       <div className="form_top">
-        <Image src={formicon} alt="icon" width={50} height={50} />
-        <h6>Get Started Today</h6>
-        <span className="pb-20px">
+        <Image
+          src={formicon}
+          alt="Application form icon"
+          width={50}
+          height={50}
+        />
+        <h2>Get Started Today</h2>
+        <p className="pb-20px">
           Begin your medical marijuana card Pennsylvania application
-        </span>
+        </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-
+      <form onSubmit={handleSubmit(onSubmit)} noValidate>
+        
+        {/* Name */}
         <div className="form_group">
-          <label>Full Name *</label>
-          <input {...register("name")} placeholder="Enter your name" />
-          {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+          <label htmlFor="name">Full Name *</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Enter your name"
+            {...register("name")}
+            aria-invalid={!!errors.name}
+            aria-describedby="name-error"
+          />
+          {errors.name && (
+            <p id="name-error" role="alert" className="text-red-500 text-sm">
+              {errors.name.message}
+            </p>
+          )}
         </div>
 
+        {/* Email */}
         <div className="form_group">
-          <label>Email Address *</label>
-          <input {...register("email")} placeholder="Enter your email" />
-          {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+          <label htmlFor="email">Email Address *</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            {...register("email")}
+            aria-invalid={!!errors.email}
+            aria-describedby="email-error"
+          />
+          {errors.email && (
+            <p id="email-error" role="alert" className="text-red-500 text-sm">
+              {errors.email.message}
+            </p>
+          )}
         </div>
 
+        {/* Phone */}
         <div className="form_group">
-          <label>Phone Number *</label>
-          <input {...register("phone")} placeholder="Enter your phone" />
-          {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
+          <label htmlFor="phone">Phone Number *</label>
+          <input
+            id="phone"
+            type="tel"
+            placeholder="Enter your phone"
+            {...register("phone")}
+            aria-invalid={!!errors.phone}
+            aria-describedby="phone-error"
+          />
+          {errors.phone && (
+            <p id="phone-error" role="alert" className="text-red-500 text-sm">
+              {errors.phone.message}
+            </p>
+          )}
         </div>
 
+        {/* Terms */}
         <div className="flex items-center space-x-2">
-          <input type="checkbox" {...register("terms")} />
-          <label>I accept the terms and conditions *</label>
+          <input
+            id="terms"
+            type="checkbox"
+            {...register("terms")}
+            aria-invalid={!!errors.terms}
+            aria-describedby="terms-error"
+          />
+          <label htmlFor="terms">
+            I accept the terms and conditions *
+          </label>
         </div>
-        {errors.terms && <p className="text-red-500 text-sm">{errors.terms.message}</p>}
+        {errors.terms && (
+          <p id="terms-error" role="alert" className="text-red-500 text-sm">
+            {errors.terms.message}
+          </p>
+        )}
 
+        {/* Marketing */}
         <div className="flex items-center space-x-2 pt-10px pb-20px">
-          <input type="checkbox" {...register("marketing")} />
-          <label>
+          <input id="marketing" type="checkbox" {...register("marketing")} />
+          <label htmlFor="marketing">
             I agree to receive emails with educational content and offers
           </label>
         </div>
 
         <div className="text-center">
-          <button className="btn_primary" disabled={isSubmitting}>
+          <button
+            type="submit"
+            className="btn_primary"
+            disabled={isSubmitting}
+            aria-busy={isSubmitting}
+          >
             {isSubmitting ? "Submitting..." : "Apply Your Card"}
           </button>
         </div>
-
       </form>
     </div>
   );
