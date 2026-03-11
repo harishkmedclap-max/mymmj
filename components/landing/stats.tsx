@@ -13,7 +13,7 @@ export default function StatsBar() {
       <div className="max-w-4xl mx-auto flex flex-wrap justify-center md:justify-between gap-8">
         {stats.map(({ icon: Icon, value, label }) => (
           <div key={label} className="flex flex-col items-center gap-2 min-w-[100px]">
-            <div className="w-12 h-12 rounded-full bg-teal-500 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full bg-[#10b981] flex items-center justify-center">
               <Icon className="w-5 h-5 text-white" strokeWidth={1.8} />
             </div>
             <span className="text-2xl font-extrabold text-gray-900 leading-none">{value}</span>
