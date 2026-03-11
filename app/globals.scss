@@ -1,18 +1,18 @@
 // ============================================
 // Global SCSS – shared across all components
 // ============================================
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 // Variables
-$color-green: #10B981;
-$color-grey: #6B7280;
+$color-green: #10b981;
+$color-grey: #6b7280;
 $li-color: #374151;
-$button-bg: #01282B;
-$sub-heading: #1F2937;
+$button-bg: #01282b;
+$sub-heading: #1f2937;
 $text-white: #ffffff;
 $color-border: #e5e7eb;
 $color-bg: #ffffff;
@@ -48,13 +48,13 @@ button {
   cursor: pointer;
 }
 h2 {
-font-weight: 700;
-font-style: Bold;
-font-size: 42px;
-line-height: 63px;
-span {
-  color: $color-green;
-}
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 42px;
+  line-height: 63px;
+  span {
+    color: $color-green;
+  }
 }
 p {
   font-weight: 400;
@@ -174,10 +174,10 @@ header {
 }
 
 .hero_section {
-  background: linear-gradient(135deg, #033C3F 0%, #002124 100%);
+  background: linear-gradient(135deg, #033c3f 0%, #002124 100%);
 
   button.top_chips {
-    border: 0.8px solid #FFFFFF1A;
+    border: 0.8px solid #ffffff1a;
     border-radius: 4px;
     padding: 5px 15px 5px 26px;
     color: $text-white;
@@ -187,10 +187,10 @@ header {
     letter-spacing: 0.05em;
     border-radius: 100px;
     backdrop-filter: blur(4px);
-    background: #FFFFFF1A;
+    background: #ffffff1a;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 38%;
       left: 12px;
@@ -206,7 +206,7 @@ header {
     font-weight: 600;
     line-height: 64px;
     letter-spacing: 0%;
-    color: $text-white;
+    // color: $text-white;
 
     span {
       color: $color-green;
@@ -214,7 +214,7 @@ header {
   }
 
   p {
-    color: $text-white;
+    // color: $text-white;
   }
 
   .features_wrap {
@@ -225,7 +225,7 @@ header {
       gap: 10px;
 
       h3 {
-        color: $text-white;
+        // color: $text-white;
         font-size: 14px;
       }
     }
@@ -240,7 +240,7 @@ header {
         font-size: 16px;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 38%;
           left: 12px;
@@ -258,7 +258,7 @@ header {
   }
 
   .hero_form_wrap {
-    box-shadow: 0px 10px 30px 0px #0000001A;
+    box-shadow: 0px 10px 30px 0px #0000001a;
     background: $text-white;
     border-radius: 12px;
     padding: 30px 35px;
@@ -274,7 +274,6 @@ header {
         font-size: 24px;
         line-height: 36px;
         text-align: center;
-
       }
 
       span {
@@ -284,7 +283,7 @@ header {
     }
 
     .form_group {
-padding-bottom: 14px;
+      padding-bottom: 14px;
       label {
         font-weight: 500;
         font-size: 12px;
@@ -295,15 +294,15 @@ padding-bottom: 14px;
 
       input {
         width: 100%;
-        border: 1.33px solid #E5E7EB;
+        border: 1.33px solid #e5e7eb;
         padding: 13.33px;
         border-radius: 6px;
         margin-top: 6px;
         &::placeholder {
-font-weight: 400;
-font-size: 14px;
-line-height: 21px;
-color: #757575;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          color: #757575;
         }
       }
     }
@@ -316,11 +315,9 @@ color: #757575;
   }
 }
 
-
-
 .trusted_section {
   padding: 80px 20px;
-  background: linear-gradient(247.92deg, #ECFDF5 48.59%, #FFFFFF 91.29%);
+  background: linear-gradient(247.92deg, #ecfdf5 48.59%, #ffffff 91.29%);
 
   .trusted_header {
     text-align: center;
@@ -356,7 +353,7 @@ color: #757575;
   .trusted_card {
     border-radius: 8px;
     padding: 31.33px;
-    border: 1px solid #F3F4F6;
+    border: 1px solid #f3f4f6;
     transition: box-shadow 0.3s ease;
     background: #fff;
 

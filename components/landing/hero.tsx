@@ -1,12 +1,12 @@
 import formicon from "@/public/assets/form-top-icon.png";
 import Image from "next/image";
-import Form from "@/app/components/landing/form";
+import Form from "@/components/landing/form";
 
 export default function Hero() {
   const features = [
-    { label: "Licensed Doctors", icon: formicon },
     { label: "Fast Approval", icon: formicon },
     { label: "100% Online", icon: formicon },
+    { label: "Licensed Doctors", icon: formicon }
   ];
   const heroList = [
     "Licensed Pennsylvania Medical Marijuana Doctor evaluations",
@@ -24,7 +24,7 @@ export default function Hero() {
             <div className="features_wrap flex gap-4 pt-30px pb-30px">
               {features.map(({ label, icon }) => (
                 <div className="feature_item" key={label}>
-                  <Image src={icon} alt="icon here" className="main_logo" />
+                  <Image src={icon} alt="icon here" width={50} height={50} />
                   <h3>{label}</h3>
                 </div>
               ))}

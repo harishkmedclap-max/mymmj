@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header className="w-full border-b border-gray-100 bg-white shadow-sm relative z-50">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto py-3 flex items-center justify-between">
 
         {/* Logo */}
         <div className="flex items-center gap-3 min-w-fit">
@@ -26,7 +26,7 @@ export default function Header() {
             <p className="text-green-600 font-semibold text-sm tracking-wide">Pennsylvania</p>
             <p className="text-gray-800 font-bold text-sm tracking-tight">Medical Marijuana Card</p>
           </div> */}
-          <Image src={logo} alt="Logo" className="main_logo" />
+          <Image src={logo} alt="Logo" width={200} height={80} />
         </div>
 
         {/* Desktop Nav */}
