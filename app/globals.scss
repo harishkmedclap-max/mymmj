@@ -1,10 +1,10 @@
 // ============================================
 // Global SCSS – shared across all components
 // ============================================
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 
 body {
-  font-family: "Inter", sans-serif;
+   font-family: var(--font-inter), "Inter", sans-serif;
 }
 
 // Variables

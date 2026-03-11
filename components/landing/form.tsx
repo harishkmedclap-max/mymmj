@@ -10,7 +10,7 @@ import {FormSchemaType, formSchema} from "@/lib/formSchema"
 export default function Form() {
   const {
     register,
-    handleSubmit,
+    handleSubmit, 
     formState: { errors, isSubmitting },
   } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
