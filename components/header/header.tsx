@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Image from "next/image";
-import logo from "@/public/assets/logo (2) 1.png";
+import logo from "@/public/assets/logo.png";
 
 const navLinks = ["Process", "Conditions", "Pricing", "FAQ"];
 
@@ -31,27 +31,17 @@ export default function Header() {
 
         {/* Logo */}
         <div className="flex items-center gap-3 min-w-fit">
-          {/* <div className="w-11 h-11 rounded-full border-2 border-green-600 flex items-center justify-center bg-white">
-            <svg viewBox="0 0 40 40" className="w-8 h-8" fill="none">
-              <circle cx="20" cy="20" r="18" fill="#f0fdf4" stroke="#16a34a" strokeWidth="2" />
-              <rect x="17" y="10" width="6" height="20" rx="2" fill="#16a34a" />
-              <rect x="10" y="17" width="20" height="6" rx="2" fill="#16a34a" />
-            </svg>
-          </div>
-          <div className="leading-tight">
-            <p className="text-green-600 font-semibold text-sm tracking-wide">Pennsylvania</p>
-            <p className="text-gray-800 font-bold text-sm tracking-tight">Medical Marijuana Card</p>
-          </div> */}
-          <Image src={logo} alt="Logo" width={200} height={80} />
+          <Image src={logo} alt="Pennsylvania Medical Marijuana Card" width={200} height={80} />
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav aria-label="Main navigation" className="hidden md:flex items-center gap-8">
           {navLinks.map((item) => (
             <a
               key={item}
               href="#"
               className="text-gray-600 text-sm font-medium hover:text-green-600 transition-colors duration-200"
+              aria-label={`Link to ${item}`}
             >
               {item}
             </a>
@@ -77,9 +67,12 @@ export default function Header() {
 
         {/* Mobile: Hamburger */}
         <button
+          type="button"
           className="md:hidden flex items-center justify-center w-10 h-10 rounded-md text-gray-700 hover:bg-gray-100 transition-colors duration-200"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
           {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -88,8 +81,8 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg z-50">
-          <nav className="flex flex-col px-6 py-4 gap-1">
+        <div  id="mobile-menu" className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg z-50">
+          <nav aria-label="Mobile navigation" className="flex flex-col px-6 py-4 gap-1">
             {navLinks.map((item) => (
               <a
                 key={item}
@@ -104,6 +97,7 @@ export default function Header() {
             {/* Phone */}
             <a
               href="tel:800-123-4567"
+              aria-label="Call 800 123 4567"
               className="flex items-center gap-2 text-gray-700 text-sm font-medium py-3 border-b border-gray-50 hover:text-green-600 transition-colors duration-200"
             >
               <Phone className="w-4 h-4 text-green-600" strokeWidth={2} />
