@@ -43,7 +43,7 @@ export default function PricingSection() {
           <span className="border border-white/20 text-white/60 text-xs px-4 py-1.5 rounded-full">
             ✦ SIMPLE PRICING
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+          <h2 className="!text-white">
             Transparent Pricing for <br />
             Your <span className="text-emerald-400">MMJ Card Online</span>
           </h2>

@@ -28,7 +28,7 @@ export default function FAQSection() {
           <span className="inline-flex mx-auto items-center border border-white/20 text-white/60 text-xs px-4 py-1.5 rounded-full w-fit">
             FAQ
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+          <h2 className="!text-white">
             Frequently Asked <span className="text-emerald-400">Questions</span>
           </h2>
           <p className="text-white/45 text-sm">

@@ -59,7 +59,7 @@ export default function Header() {
           </a>
           <a
             href="#"
-            className="get_started"
+            className="bg-[#01282b] text-white font-semibold text-sm leading-5 rounded px-5 py-[6px]"
           >
             Get Started
           </a>

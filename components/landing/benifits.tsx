@@ -48,7 +48,7 @@ export default function PatientBenefits() {
           </span>
 
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+          <h2 className="!text-white">
             Benefits of Your{" "}
             <span className="text-emerald-400">Medical Cannabis Card</span>{" "}
             <br className="hidden md:block" />

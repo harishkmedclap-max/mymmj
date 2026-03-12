@@ -39,7 +39,7 @@ export default function MedicalCardSteps() {
     >
       {/* Heading */}
       <div className="text-center mb-10 sm:mb-16">
-        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold mb-1">
+        <h2 className="!text-[#ffffff]">
           Steps to Receive Your Pennsylvania
         </h2>
         <h2
