@@ -59,7 +59,7 @@ export default function Reviews() {
             <article key={name} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4">
               <Stars />
               <Quote className="w-6 h-6 text-[#059669]" strokeWidth={1.5} aria-hidden="true" />
-              <p className="text-sm text-gray-700 leading-relaxed flex-1">"{text}"</p>
+              <p className="text-sm text-gray-700 leading-relaxed flex-1">{text}</p>
               <footer>
                 <p className="text-sm font-bold text-gray-900">{name}</p>
                 {/* CONTRAST FIX: text-gray-400 fails at text-xs → text-gray-600 */}
