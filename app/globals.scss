@@ -1,60 +1,60 @@
-// ============================================
-// Global SCSS – shared across all components
-// ============================================
+// // ============================================
+// // Global SCSS – shared across all components
+// // ============================================
 
 
-body {
-   font-family: var(--font-inter), "Inter", sans-serif;
-}
-
-// Variables
-$color-green: #10b981;
-$color-grey: #6b7280;
-$li-color: #374151;
-$button-bg: #01282b;
-$sub-heading: #1f2937;
-$text-white: #ffffff;
-$color-border: #e5e7eb;
-$color-bg: #ffffff;
-$transition-default: 0.2s ease;
-
-$breakpoint-md: 768px;
-$container-max: 80rem;
-
-// Mixins
-@mixin respond-to($breakpoint) {
-  @media (min-width: $breakpoint) {
-    @content;
-  }
-}
-
-@mixin transition($props: all) {
-  transition: $props $transition-default;
-}
-
-// Base resets / overrides (optional, Tailwind may cover these)
-a {
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-h2 {
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 42px;
-  line-height: 63px;
-  color: $sub-heading;
-  span {
-    color: $color-green;
-  }
-}
-// p {
-//   font-weight: 400;
-//   font-style: Regular;
-//   font-size: 18px;
-//   leading-trim: NONE;
-//   line-height: 24px;
-//   letter-spacing: 0%;
+// body {
+//    font-family: var(--font-inter), "Inter", sans-serif;
 // }
+
+// // Variables
+// $color-green: #10b981;
+// $color-grey: #6b7280;
+// $li-color: #374151;
+// $button-bg: #01282b;
+// $sub-heading: #1f2937;
+// $text-white: #ffffff;
+// $color-border: #e5e7eb;
+// $color-bg: #ffffff;
+// $transition-default: 0.2s ease;
+
+// $breakpoint-md: 768px;
+// $container-max: 80rem;
+
+// // Mixins
+// @mixin respond-to($breakpoint) {
+//   @media (min-width: $breakpoint) {
+//     @content;
+//   }
+// }
+
+// @mixin transition($props: all) {
+//   transition: $props $transition-default;
+// }
+
+// // Base resets / overrides (optional, Tailwind may cover these)
+// a {
+//   text-decoration: none;
+// }
+
+// button {
+//   cursor: pointer;
+// }
+// h2 {
+//   font-weight: 700;
+//   font-style: Bold;
+//   font-size: 42px;
+//   line-height: 63px;
+//   color: $sub-heading;
+//   span {
+//     color: $color-green;
+//   }
+// }
+// // p {
+// //   font-weight: 400;
+// //   font-style: Regular;
+// //   font-size: 18px;
+// //   leading-trim: NONE;
+// //   line-height: 24px;
+// //   letter-spacing: 0%;
+// // }

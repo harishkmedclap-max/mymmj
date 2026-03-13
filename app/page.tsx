@@ -6,11 +6,11 @@ import ExpertCare from "@/components/landing/expertcare";
 import Stats from "@/components/landing/stats";
 import StartJourney from "@/components/landing/startjourney";
 import Conditions from "@/components/landing/conditions";
-import Benifits from "@/components/landing/benifits";
+import Benefits from "@/components/landing/benefits";
 import Pricing from "@/components/landing/pricing";
 import Reviews from "@/components/landing/reviews";
-import SpeakWithDoc from "@/components/landing/speakwithdoc";
 import Faq from "@/components/landing/faq";
+import SpeakWithDoc from "@/components/landing/speakwithdoc";
 import Footer from "@/components/footer/footer";
 import BackToTop from "@/components/backtotop";
 
@@ -18,20 +18,23 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Hero />
-      <Trust />
-      <Steps />
-      <ExpertCare />
-      <Stats />
-      <StartJourney />
-      <Conditions />
-      <Benifits />
-      <Pricing />
-      <Reviews />
-      <Faq />
-      <SpeakWithDoc />
+      {/* id="main-content" is the skip-link target */}
+      <main id="main-content" tabIndex={-1}>
+        <Hero />
+        <Trust />
+        <Steps />
+        <ExpertCare />
+        <Stats />
+        <StartJourney />
+        <Conditions />
+        <Benefits />
+        <Pricing />
+        <Reviews />
+        <Faq />
+        <SpeakWithDoc />
+      </main>
       <Footer />
-      <div className="back_to_top"><BackToTop /> </ div>
+      <BackToTop />
     </>
   );
 }

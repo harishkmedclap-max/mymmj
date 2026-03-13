@@ -1,4 +1,7 @@
 "use client";
+// Header must stay "use client" for scroll detection + mobile menu state.
+// To minimise its JS cost, we import only what's needed from lucide-react
+// and keep all static content (logo, nav links) as plain HTML — no extra state.
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Image from "next/image";
@@ -11,103 +14,101 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
   return (
     <header
-    className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out
-      ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300
+        ${scrolled
           ? "backdrop-blur-md bg-white/70 border-b border-white/40 shadow-md"
           : "bg-white border-b border-gray-100 shadow-sm"
-      }`}
-  >
-      <div className="max-w-7xl mx-auto py-3 flex items-center justify-between">
+        }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
 
-        {/* Logo */}
-        <div className="flex items-center gap-3 min-w-fit">
-          <Image src={logo} alt="Pennsylvania Medical Marijuana Card" width={200} height={80} />
-        </div>
+        {/* FIX 5: Logo — always provide explicit width + height so the browser
+            can reserve space before the image loads, preventing CLS.
+            priority = adds <link rel="preload"> for this above-the-fold image. */}
+        <Image
+          src={logo}
+          alt="Pennsylvania Medical Marijuana Card"
+          width={200}
+          height={56}
+          priority
+          fetchPriority="high"
+        />
 
         {/* Desktop Nav */}
         <nav aria-label="Main navigation" className="hidden md:flex items-center gap-8">
           {navLinks.map((item) => (
             <a
               key={item}
-              href="#"
-              className="text-gray-600 text-sm font-medium hover:text-green-600 transition-colors duration-200"
-              aria-label={`Link to ${item}`}
+              href={`#${item.toLowerCase()}`}
+              className="text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200"
             >
               {item}
             </a>
           ))}
         </nav>
 
-        {/* Desktop Right Side */}
+        {/* Desktop right */}
         <div className="hidden md:flex items-center gap-5">
           <a
             href="tel:800-123-4567"
-            className="flex items-center gap-2 text-gray-700 text-sm font-medium hover:text-green-600 transition-colors duration-200"
+            className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors"
           >
-            <Phone className="w-4 h-4 text-green-600" strokeWidth={2} />
+            <Phone className="w-4 h-4 text-emerald-600" strokeWidth={2} />
             800-123-4567
           </a>
           <a
-            href="#"
-            className="bg-[#01282b] text-white font-semibold text-sm leading-5 rounded px-5 py-[6px]"
+            href="#apply"
+            className="bg-[#01282b] text-white text-sm font-semibold rounded px-5 py-1.5 hover:bg-[#023f44] transition-colors"
           >
             Get Started
           </a>
         </div>
 
-        {/* Mobile: Hamburger */}
+        {/* Mobile hamburger */}
         <button
           type="button"
-          className="md:hidden flex items-center justify-center w-10 h-10 rounded-md text-gray-700 hover:bg-gray-100 transition-colors duration-200"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
+          className="md:hidden flex items-center justify-center w-10 h-10 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
         >
           {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
-
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile menu */}
       {menuOpen && (
-        <div  id="mobile-menu" className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg z-50">
+        <div id="mobile-menu" className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg">
           <nav aria-label="Mobile navigation" className="flex flex-col px-6 py-4 gap-1">
             {navLinks.map((item) => (
               <a
                 key={item}
-                href="#"
+                href={`#${item.toLowerCase()}`}
                 onClick={() => setMenuOpen(false)}
-                className="text-gray-700 text-sm font-medium py-3 border-b border-gray-50 hover:text-green-600 transition-colors duration-200"
+                className="text-sm font-medium text-gray-700 py-3 border-b border-gray-50 hover:text-emerald-600 transition-colors"
               >
                 {item}
               </a>
             ))}
-
-            {/* Phone */}
             <a
               href="tel:800-123-4567"
-              aria-label="Call 800 123 4567"
-              className="flex items-center gap-2 text-gray-700 text-sm font-medium py-3 border-b border-gray-50 hover:text-green-600 transition-colors duration-200"
+              className="flex items-center gap-2 text-sm font-medium text-gray-700 py-3 border-b border-gray-50 hover:text-emerald-600 transition-colors"
             >
-              <Phone className="w-4 h-4 text-green-600" strokeWidth={2} />
+              <Phone className="w-4 h-4 text-emerald-600" strokeWidth={2} />
               800-123-4567
             </a>
-
-            {/* CTA */}
             <a
-              href="#"
-              className="mt-3 bg-gray-900 hover:bg-gray-700 text-white text-sm font-semibold px-5 py-3 rounded-md text-center transition-colors duration-200"
+              href="#apply"
+              onClick={() => setMenuOpen(false)}
+              className="mt-3 bg-gray-900 text-white text-sm font-semibold px-5 py-3 rounded-md text-center hover:bg-gray-700 transition-colors"
             >
               Get Started
             </a>

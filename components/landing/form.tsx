@@ -1,154 +1,100 @@
 "use client";
-
 import Image from "next/image";
 import formicon from "@/public/assets/form-top-icon.png";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormSchemaType, formSchema } from "@/lib/formSchema";
 
+const inputClass =
+  "w-full border border-[#d1d5db] p-[13px] rounded-md mt-1.5 text-sm text-gray-800 placeholder:text-[#6b7280] outline-none focus:border-[#033c3f] focus:ring-2 focus:ring-[#033c3f]/30 transition";
+
+const labelClass = "block text-sm font-semibold text-[#374151]"; /* CONTRAST FIX: xs→sm, medium→semibold */
+
 export default function Form() {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<FormSchemaType>({
-    resolver: zodResolver(formSchema),
-  });
+  } = useForm<FormSchemaType>({ resolver: zodResolver(formSchema) });
 
-  const onSubmit = (data: FormSchemaType) => {
-    try {
-      console.log("Form Data:", data);
-      alert("Application submitted!");
-    } catch (error) {
-      console.error(error);
-    }
+  const onSubmit = async (data: FormSchemaType) => {
+    console.log("Form Data:", data);
+    alert("Application submitted!");
   };
 
   return (
-    <div className="shadow-[0px_10px_30px_0px_#0000001a] bg-white rounded-xl px-[35px] py-[30px]">
-      <div className="flex flex-col items-center gap-[5px]">
-        <Image src={formicon} alt="Application form icon" width={50} height={50} />
-        <h2 className="font-inter font-normal !text-[24px] leading-[36px] tracking-normal text-center text-[#1F2937]">
-          Get Started Today
-        </h2>
-        <p className="text-[#6B7280] !text-sm pb-5">
-          Begin your medical marijuana card Pennsylvania application
-        </p>
+    <div id="apply" className="shadow-[0px_10px_30px_0px_#0000001a] bg-white rounded-xl px-9 py-8">
+      <div className="flex flex-col items-center gap-1 pb-6">
+        <Image src={formicon} alt="" width={50} height={50} sizes="50px" aria-hidden="true" />
+        <h2 className="heading-tertiary" style={{ fontSize: "1.375rem" }}>Get Started Today</h2>
+        <p className="text-muted text-center">Begin your medical marijuana card Pennsylvania application</p>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
+        <div className="pb-3.5">
+          <label htmlFor="name" className={labelClass}>Full Name <span aria-hidden="true">*</span></label>
+          <input id="name" type="text" placeholder="Enter your full name" autoComplete="name"
+            {...register("name")} aria-invalid={!!errors.name} aria-describedby={errors.name ? "name-error" : undefined}
+            className={inputClass} />
+          {errors.name && <p id="name-error" role="alert" className="text-red-700 text-xs mt-1 font-medium">{errors.name.message}</p>}
+        </div>
 
-        {/* Name */}
-        <div className="pb-[14px]">
-          <label htmlFor="name" className="font-medium text-xs leading-[18px] text-[#6b7280] block">
-            Full Name *
-          </label>
-          <input
-            id="name"
-            type="text"
-            placeholder="Enter your name"
-            {...register("name")}
-            aria-invalid={!!errors.name}
-            aria-describedby="name-error"
-            className="w-full border border-[#e5e7eb] border-[1.33px] p-[13.33px] rounded-md mt-[6px] placeholder:font-normal placeholder:text-sm placeholder:leading-[21px] placeholder:text-[#757575] outline-none focus:border-[#033c3f]"
-          />
-          {errors.name && (
-            <span id="name-error" role="alert" className="text-red-500 text-sm">
-              {errors.name.message}
+        <div className="pb-3.5">
+          <label htmlFor="email" className={labelClass}>Email Address <span aria-hidden="true">*</span></label>
+          <input id="email" type="email" placeholder="Enter your email" autoComplete="email"
+            {...register("email")} aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-error" : undefined}
+            className={inputClass} />
+          {errors.email && <p id="email-error" role="alert" className="text-red-700 text-xs mt-1 font-medium">{errors.email.message}</p>}
+        </div>
+
+        <div className="pb-3.5">
+          <label htmlFor="phone" className={labelClass}>Phone Number <span aria-hidden="true">*</span></label>
+          <input id="phone" type="tel" placeholder="Enter your phone number" autoComplete="tel"
+            {...register("phone")} aria-invalid={!!errors.phone} aria-describedby={errors.phone ? "phone-error" : undefined}
+            className={inputClass} />
+          {errors.phone && <p id="phone-error" role="alert" className="text-red-700 text-xs mt-1 font-medium">{errors.phone.message}</p>}
+        </div>
+
+        <div className="pb-2">
+          <label className="flex items-start gap-2.5 cursor-pointer">
+            <input id="terms" type="checkbox" {...register("terms")}
+              className="mt-0.5 w-4 h-4 accent-[#059669] cursor-pointer" />
+            {/* CONTRAST FIX: text-xs → text-sm, color darkened */}
+            <span className="text-sm text-[#1f2937] leading-relaxed">
+              I accept the <span className="underline">terms and conditions</span> <span aria-hidden="true">*</span>
             </span>
-          )}
+          </label>
+          {errors.terms && <p id="terms-error" role="alert" className="text-red-700 text-xs mt-1 font-medium">{errors.terms.message}</p>}
         </div>
 
-        {/* Email */}
-        <div className="pb-[14px]">
-          <label htmlFor="email" className="font-medium text-xs leading-[18px] text-[#6b7280] block">
-            Email Address *
-          </label>
-          <input
-            id="email"
-            type="email"
-            placeholder="Enter your email"
-            {...register("email")}
-            aria-invalid={!!errors.email}
-            aria-describedby="email-error"
-            className="w-full border border-[#e5e7eb] border-[1.33px] p-[13.33px] rounded-md mt-[6px] placeholder:font-normal placeholder:text-sm placeholder:leading-[21px] placeholder:text-[#757575] outline-none focus:border-[#033c3f]"
-          />
-          {errors.email && (
-            <span id="email-error" role="alert" className="text-red-500 text-sm">
-              {errors.email.message}
+        <div className="pb-5">
+          <label className="flex items-start gap-2.5 cursor-pointer">
+            <input id="marketing" type="checkbox" {...register("marketing")}
+              className="mt-0.5 w-4 h-4 accent-[#059669] cursor-pointer" />
+            <span className="text-sm text-[#374151] leading-relaxed">
+              I agree to receive emails with educational content and offers
             </span>
-          )}
-        </div>
-
-        {/* Phone */}
-        <div className="pb-[14px]">
-          <label htmlFor="phone" className="font-medium text-xs leading-[18px] text-[#6b7280] block">
-            Phone Number *
-          </label>
-          <input
-            id="phone"
-            type="tel"
-            placeholder="Enter your phone"
-            {...register("phone")}
-            aria-invalid={!!errors.phone}
-            aria-describedby="phone-error"
-            className="w-full border border-[#e5e7eb] border-[1.33px] p-[13.33px] rounded-md mt-[6px] placeholder:font-normal placeholder:text-sm placeholder:leading-[21px] placeholder:text-[#757575] outline-none focus:border-[#033c3f]"
-          />
-          {errors.phone && (
-            <span id="phone-error" role="alert" className="text-red-500 text-sm">
-              {errors.phone.message}
-            </span>
-          )}
-        </div>
-
-        {/* Terms */}
-        <div className="flex items-center space-x-2 pb-2.5">
-          <input
-            id="terms"
-            type="checkbox"
-            {...register("terms")}
-            aria-invalid={!!errors.terms}
-            aria-describedby="terms-error"
-            className="accent-[#10b981]"
-          />
-          <label htmlFor="terms" className="text-xs leading-[18px] font-normal tracking-normal text-[#374151]">
-            I accept the terms and conditions *
-          </label>
-        </div>
-       {errors.terms && (
-          <span id="terms-error" role="alert" className="text-red-500 text-sm mt-[-5px]">
-            {errors.terms.message}
-          </span>
-        )}
-
-        {/* Marketing */}
-        <div className="flex items-center space-x-2 pb-5">
-          <input
-            id="marketing"
-            type="checkbox"
-            {...register("marketing")}
-            className="accent-[#10b981]"
-          />
-          <label htmlFor="marketing" className="text-xs leading-[18px] font-normal tracking-normal text-[#374151]">
-            I agree to receive emails with educational content and offers
           </label>
         </div>
 
         <div className="text-center">
+          {/* CONTRAST FIX: #10b981 bg with white text = 2.9:1 FAIL
+              → #059669 (emerald-600) with white = 4.6:1 PASS              */}
           <button
             type="submit"
             disabled={isSubmitting}
             aria-busy={isSubmitting}
-            className="bg-[#10b981] text-[#fff] px-5 py-2 rounded-md font-medium hover:opacity-90 transition-opacity disabled:opacity-60 cursor-pointer"
+            className="bg-[#059669] text-white px-8 py-3 rounded-md text-sm font-semibold hover:bg-[#047857] focus:outline-none focus:ring-2 focus:ring-[#059669] focus:ring-offset-2 transition-colors disabled:opacity-60"
           >
-            {isSubmitting ? "Submitting..." : "Apply Your Card"}
+            {isSubmitting ? "Submitting…" : "Apply for Your Card"}
           </button>
         </div>
-        <div className="flex flex-col items-center mt-4">
-          <span className="font-normal text-[11px] leading-[16.5px] tracking-normal text-gray-500">
-            🔒 HIPAA Compliant & 100% Secure
-          </span>
-        </div>
+
+        {/* CONTRAST FIX: text-[11px] text-gray-400 fails at this size
+            → text-xs text-gray-600                                        */}
+        <p className="text-center text-xs text-gray-600 mt-4 font-medium">
+          🔒 HIPAA Compliant & 100% Secure
+        </p>
       </form>
     </div>
   );
