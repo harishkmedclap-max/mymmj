@@ -1,5 +1,4 @@
-import Image from "next/image";
-import formicon from "@/public/assets/form-top-icon.png";
+import { BadgeCheck ,Clock , Stethoscope } from "lucide-react"
 /**
  * PERFORMANCE FIX: Import FormWrapper (lazy) instead of Form (eager).
  * This one line change moves react-hook-form + zod out of the critical bundle.
@@ -9,9 +8,9 @@ import formicon from "@/public/assets/form-top-icon.png";
 import FormWrapper from "@/components/landing/formwrapper";
 
 const features = [
-  { label: "HIPAA-Compliant" },
-  { label: "Money-Back Guarantee" },
-  { label: "Licensed Doctors" },
+  { label: "HIPAA-Compliant", icon: BadgeCheck },
+  { label: "Money-Back Guarantee", icon: Clock },
+  { label: "Licensed Doctors", icon: Stethoscope },
 ];
 
 const heroList = [
@@ -43,16 +42,11 @@ export default function Hero() {
             </p>
 
             <div className="flex gap-6 py-6">
-              {features.map(({ label }) => (
+              {features.map(({ label, icon: Icon }) => (
                 <div key={label} className="flex flex-col items-center gap-2">
-                  <Image
-                    src={formicon}
-                    alt=""
-                    width={44}
-                    height={44}
-                    sizes="44px"
-                    aria-hidden="true"
-                  />
+                  <div className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20">
+                    <Icon size={20} className="text-[#34d399]" />
+                  </div>
                   <span className="text-xs font-medium text-white">{label}</span>
                 </div>
               ))}

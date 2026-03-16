@@ -40,9 +40,9 @@ export default function Steps() {
       {/* CTA */}
       <a
         href="#apply"
-        className="inline-flex items-center gap-2 w-fit bg-[#1a3a35] hover:bg-[#224a44] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors"
+        className="inline-flex items-center gap-2 w-fit bg-white text-[#2db882] hover:bg-gray-200 px-6 py-3 rounded-full transition-colors  font-semibold tracking-normal"
       >
-        Start Your Journey Now →
+        Consult With a PA MMJ Doctor Today →
       </a>
     </section>
   );
