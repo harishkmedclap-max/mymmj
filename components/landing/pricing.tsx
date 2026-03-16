@@ -6,14 +6,14 @@ const plans = [
     price: "$199",
     desc: "Complete evaluation & certification",
     popular: true,
-    ctaLabel: "Get Started Now",
+    ctaLabel: "Apply Your MMJ Card",
     ctaHref: "#apply",
     features: [
       "Online consultation with licensed physician",
-      "Medical marijuana certification",
+      "Medical marijuana Recommendation",
       "Personalized treatment guidance",
-      "Follow-up support included",
       "100% money-back guarantee if not approved",
+      "24/7 Support",
     ],
   },
   {
@@ -21,14 +21,14 @@ const plans = [
     price: "$149",
     desc: "Annual card renewal",
     popular: false,
-    ctaLabel: "Renew Now",
+    ctaLabel: "Renew Your MMJ Card Now",
     ctaHref: "#apply",
     features: [
       "Quick renewal consultation",
-      "Updated certification",
-      "Treatment plan review",
-      "Same-day processing available",
-      "Continued care support",
+      "Updated MMJ certification",
+      "Treatment Plan Guidance",
+      "Same-day Appointments Available",
+      "24/7 support",
     ],
   },
 ];
@@ -43,15 +43,19 @@ export default function Pricing() {
             {/* CONTRAST FIX: white/60 on dark = 3.2:1 fail → white/90 = 9.1:1 ✓ */}
             ✦ SIMPLE PRICING
           </span>
-          <h2 className="heading-secondary text-white">
-            Transparent Pricing for Your{" "}
-            <span style={{ color: "#34d399" }}>MMJ Card Online</span>
-          </h2>
-          <p className="text-muted-inv max-w-md">
-            Simple, upfront pricing for a{" "}
-            <span style={{ color: "#34d399" }}>medical marijuana card</span>{" "}
-            in Pennsylvania with no hidden fees.
-          </p>
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="heading-secondary pb-2.5 text-white">
+              Transparent Pricing You {" "}
+              <span className="text-accent"> Can Trust</span>
+            </h2>
+            <p className="text-muted-inv">
+              Our pricing structure is  {" "}
+              <span style={{ color: "#34d399" }}>transparent and patient-focused.</span>{" "}
+              You’ll see the full cost of your
+              <span style={{ color: "#34d399" }}> medical marijuana </span>{" "}
+              evaluation upfront, helping you move forward with confidence.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">

@@ -23,6 +23,7 @@ import Header from "@/components/header/header";
 import Hero from "@/components/landing/hero";       // hero already lazy-loads Form
 import Footer from "@/components/footer/footer";
 import BackToTop from "@/components/backtotop";
+import Doctors from "@/components/landing/doctors";
 
 // Everything below the fold — lazy load
 // No loading skeleton needed for server components (they SSR fine);
@@ -52,6 +53,7 @@ export default function Home() {
         <StartJourney />
         <Conditions />
         <Benefits />
+        <Doctors />
         <Pricing />
         <Reviews />
         <Faq />

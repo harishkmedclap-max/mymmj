@@ -1,36 +1,46 @@
 import { CheckCircle2 } from "lucide-react";
 
 const conditions = [
-  "Chronic Pain",
-  "Anxiety Disorders",
-  "Post-Traumatic Stress Disorder (PTSD)",
-  "Cancer",
+  "Amyotrophic lateral sclerosis",
+  "Anxiety disorders",
+  "Autism",
+  "Cancer, including remission therapy",
+  "Chronic Hepatitis C",
+  "Crohn's disease",
+  "Central Spasticity",
+  "Dyskinetic and spastic movement disorders",
   "Epilepsy",
-  "Inflammatory Bowel Disease",
-  "Multiple Sclerosis",
-  "Parkinson's Disease",
-  "Neuropathy",
-  "Crohn's Disease",
   "Glaucoma",
-  "HIV/AIDS",
+  "HIV / AIDS",
+  "Huntington's disease",
+  "Inflammatory bowel disease",
+  "Intractable seizures",
+  "Multiple sclerosis",
+  "Neurodegenerative diseases",
+  "Neuropathies",
+  "Opioid use disorder",
+  "Parkinson's disease",
+  "Post-Traumatic Stress Disorder (PTSD)",
+  "Severe Chronic Pain",
+  "Sickle cell anemia",
+  "Terminal illness",
+  "Tourette syndrome",
 ];
 
 export default function Conditions() {
   return (
     <section id="conditions" className="w-full bg-gradient-to-b from-white to-green-50 py-16 px-4">
-      <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
-
-        <h2 className="heading-secondary text-center">
-          Conditions That Qualify for a{" "}
-          <br className="hidden sm:block" />
-          Medical Marijuana Card in{" "}
-          <span className="text-accent">Pennsylvania</span>
-        </h2>
-
-        <p className="text-muted text-center max-w-md">
-          Qualifying conditions are reviewed by experienced doctors, ensuring patients
-          receive accurate guidance with MMJ Doctor Pennsylvania.
-        </p>
+      <div className="max-w-6xl mx-auto flex flex-col items-center gap-6">
+        <div className="text-center max-w-4xl mx-auto">
+          <h2 className="heading-secondary pb-2.5">
+             Conditions That Qualify for a Medical{" "}
+             <br />
+            <span className="text-accent"> Marijuana Card in Pennsylvania</span>
+          </h2>
+          <p className="text-muted">
+            Licensed physicians review your serious medical condition to determine eligibility for the Pennsylvania Medical Marijuana Program. Under state law, a “serious medical condition” includes the following conditions.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full mt-2">
           {conditions.map((condition) => (
@@ -43,7 +53,17 @@ export default function Conditions() {
             </div>
           ))}
         </div>
+        {/* <div className="">
+          <p className="text-muted">
+            Note: The following list includes medical conditions approved as a 
+            <em>“serious medical condition limited to Chapter 20 research purposes only”</em> under the act:
+          </p>
 
+          <ul className="list-disc list-inside mt-2 text-muted">
+            <li>Moderate to Severe Traumatic Brain Injury (TBI) with chronic symptoms</li>
+            <li>Type II Diabetes Mellitus</li>
+          </ul>
+        </div>    */}
       </div>
     </section>
   );

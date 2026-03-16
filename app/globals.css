@@ -22,23 +22,6 @@ body {
 a { text-decoration: none; }
 button { cursor: pointer; }
 
-/* ─── Skip link (accessibility) ──────────────────────────────── */
-.skip-link {
-  position: absolute;
-  top: -100%;
-  left: 1rem;
-  z-index: 9999;
-  padding: 0.5rem 1rem;
-  background: #033c3f;
-  color: #ffffff;
-  font-size: 0.875rem;
-  font-weight: 600;
-  border-radius: 0 0 0.5rem 0.5rem;
-  text-decoration: none;
-  transition: top 0.2s;
-}
-.skip-link:focus { top: 0; }
-
 /* ─── Typography system ──────────────────────────────────────── */
 /*
   All inverted variants use rgb() with full opacity values to guarantee

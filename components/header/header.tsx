@@ -1,7 +1,4 @@
 "use client";
-// Header must stay "use client" for scroll detection + mobile menu state.
-// To minimise its JS cost, we import only what's needed from lucide-react
-// and keep all static content (logo, nav links) as plain HTML — no extra state.
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Image from "next/image";
@@ -27,11 +24,7 @@ export default function Header() {
           : "bg-white border-b border-gray-100 shadow-sm"
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-
-        {/* FIX 5: Logo — always provide explicit width + height so the browser
-            can reserve space before the image loads, preventing CLS.
-            priority = adds <link rel="preload"> for this above-the-fold image. */}
+      <div className="max-w-7xl mx-auto py-3 flex items-center justify-between">
         <Image
           src={logo}
           alt="Pennsylvania Medical Marijuana Card"

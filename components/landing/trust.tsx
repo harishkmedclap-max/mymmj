@@ -1,27 +1,27 @@
 import { Shield, Clock, Users, DollarSign, Heart, MessageSquare } from "lucide-react";
 
 const cards = [
-  { icon: Shield,       title: "Licensed & Trusted",   desc: "Work with licensed Pennsylvania physicians who understand state medical cannabis regulations" },
-  { icon: Clock,        title: "Fast & Simple",         desc: "Complete evaluations quickly through our streamlined online consultation process" },
-  { icon: Users,        title: "Thousands Helped",      desc: "Join thousands of satisfied patients who have received their Pennsylvania Medical Marijuana Card Online" },
-  { icon: DollarSign,   title: "Transparent Pricing",   desc: "No hidden fees. Just straightforward pricing for your medical cannabis card in Pennsylvania" },
-  { icon: Heart,        title: "Compassionate Care",    desc: "Personalized attention and support throughout your medical cannabis journey" },
-  { icon: MessageSquare,title: "24/7 Support",          desc: "Patient support available when you need it most" },
+  { icon: Shield,       title: "Licensed PA Doctors", desc: "Consult with a licensed Pennsylvania MMJ doctor online who understands state medical cannabis regulations." },
+  { icon: Clock,        title: "Convenient Evaluations", desc: "Our streamlined online consultation process allows you to complete your MMJ evaluation quickly and securely, with no delays and a hassle-free experience" },
+  { icon: Users,        title: "Trusted Platform", desc: "Pennsylvania residents count on our experienced team for professional medical marijuana evaluations delivered through a secure, dependable process." },
+  { icon: DollarSign,   title: "Honest Pricing", desc: "We provide clear, upfront pricing with no hidden fees, ensuring a transparent and trustworthy experience for Pennsylvania patients." },
+  { icon: Heart,        title: "HIPAA-Compliant", desc: "Our secure platform protects your personal and medical information in accordance with HIPAA privacy standards." },
+  { icon: MessageSquare,title: "24/7 Patient Support", desc: "Our dedicated support team is available whenever you need assistance, helping ensure a smooth and stress-free evaluation experience." },
 ];
 
 export default function Trust() {
   return (
     <section className="py-20 px-5 bg-[linear-gradient(247.92deg,#ecfdf5_48.59%,#ffffff_91.29%)]">
-      <div className="text-center max-w-3xl mx-auto mb-12">
+      <div className="text-center max-w-4xl mx-auto mb-12">
         <h2 className="heading-secondary pb-2.5">
-          Trusted Choice for a Medical Marijuana Card{" "}
-          <span className="text-accent">in Pennsylvania</span>
+          Why Patients Choose Us for Their Medical{" "}
+          <span className="text-accent"> Marijuana Card Pennsylvania</span>
         </h2>
         <p className="text-muted">
-          Trusted by thousands of patients, our licensed doctors provide secure evaluations for a
-          Pennsylvania Medical Marijuana Card Online through a fast and affordable process.
+          Thousands of patients rely on our network of licensed doctors to receive medical cannabis certifications through secure online consultations. Every consultation is conducted by a Pennsylvania MMJ doctor online who understands state regulations and provides compassionate guidance.
         </p>
       </div>
+     
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {cards.map(({ icon: Icon, title, desc }) => (

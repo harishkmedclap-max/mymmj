@@ -1,9 +1,11 @@
 import { Calendar, Monitor, Shield, ArrowRight } from "lucide-react";
+import doctor from "@/public/assets/speakwithDoctor.png"
+import Image from "next/image";
 
 const features = [
-  { icon: Calendar, title: "Same-Day Appointments Available", desc: "Get started immediately with our flexible scheduling" },
-  { icon: Monitor,  title: "100% Online Process",             desc: "No in-person visits required"                        },
-  { icon: Shield,   title: "Licensed PA Physicians",          desc: "Certified medical marijuana doctors"                 },
+  { icon: Calendar, title: "Same-Day Appointments Available", desc: "Get started immediately with our flexible scheduling"},
+  { icon: Monitor,  title: "100% Online Process",             desc: "No in-person visits required"},
+  { icon: Shield,   title: "Licensed PA Physicians",          desc: "Board-Certified medical marijuana doctors"},
 ];
 
 export default function SpeakWithDoc() {
@@ -14,13 +16,12 @@ export default function SpeakWithDoc() {
         {/* Left */}
         <div className="flex-1 flex flex-col gap-6">
           <h2 className="heading-secondary">
-            Speak with your Doctor{" "}
+            Consult with your Doctor {" "}
             <span className="text-accent">Today</span>
           </h2>
 
           <p className="text-muted max-w-sm">
-            Complete a secure online consultation and receive professional guidance from
-            the comfort of your home.
+            Attend a secure online consultation with an experienced Pennsylvania medical cannabis physician.
           </p>
 
           <div className="flex flex-col gap-3">
@@ -45,17 +46,38 @@ export default function SpeakWithDoc() {
           </a>
         </div>
 
-        {/* Right — Doctor image placeholder */}
+        {/* Right — Doctor image with layered shadow effect */}
         <div className="flex-1 flex justify-center lg:justify-end">
-          <div className="relative w-72 md:w-80 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl bg-gray-200">
-            <div className="w-full h-full bg-gradient-to-b from-gray-300 to-gray-400 flex items-center justify-center opacity-60">
-              <svg className="w-20 h-20 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
+          {/* Outer glow/shadow layer */}
+          <div
+            className="rounded-2xl p-[3px]"
+            style={{
+              background: "linear-gradient(145deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.1) 100%)",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.18), 0 8px 24px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)",
+            }}
+          >
+            {/* Inner image container */}
+            <div
+              className="w-72 md:w-80 aspect-[3/4] rounded-[14px] overflow-hidden relative"
+              style={{
+                boxShadow: "inset 0 2px 8px rgba(0,0,0,0.10), inset 0 0 0 1px rgba(255,255,255,0.5)",
+              }}
+            >
+              <Image
+                src={doctor}
+                alt="Doctor consulting with patient"
+                className="object-cover w-full h-full"
+              />
+              {/* Subtle inner top highlight */}
+              <div
+                className="absolute inset-0 rounded-[14px] pointer-events-none"
+                style={{
+                  background: "linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 40%)",
+                }}
+              />
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

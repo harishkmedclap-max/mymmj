@@ -9,13 +9,13 @@ import formicon from "@/public/assets/form-top-icon.png";
 import FormWrapper from "@/components/landing/formwrapper";
 
 const features = [
-  { label: "Fast Approval" },
-  { label: "100% Online" },
+  { label: "HIPAA-Compliant" },
+  { label: "Money-Back Guarantee" },
   { label: "Licensed Doctors" },
 ];
 
 const heroList = [
-  "Licensed Pennsylvania Medical Marijuana Doctor evaluations",
+  "Board-Certified Pennsylvania MMJ Doctors",
   "HIPAA-compliant secure consultations",
   "Money-back guarantee if not approved",
 ];
@@ -39,9 +39,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-body-inv max-w-lg">
-              Doctor evaluations help patients qualify for a medical marijuana card
-              Pennsylvania residents trust, with licensed providers, private consultations,
-              and a simple process.
+              Connect with licensed physicians to get evaluated for your medical marijuana card Pennsylvania through our secure telehealth platform.
             </p>
 
             <div className="flex gap-6 py-6">

@@ -44,14 +44,16 @@ export default function Reviews() {
           <span className="border border-emerald-300 bg-emerald-50 text-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full">
             Patient Reviews
           </span>
-          <h2 className="heading-secondary">
-            Your Trusted Pennsylvania{" "}
-            <span style={{ color: "#059669" }}>Medical Marijuana Doctor</span>
+          <div className="text-center max-w-4xl mx-auto">
+          <h2 className="heading-secondary pb-2.5">
+             What Our Patients {" "}
+            <span className="text-accent"> Are Saying</span>
           </h2>
-          <p className="text-muted max-w-md">
-            Licensed physicians provide personalized evaluations and guidance, helping
-            patients move forward with confidence and care tailored to their needs.
+          <p className="text-muted max-w-3xl mx-auto">
+            Licensed physicians provide personalized evaluations and guidance, helping patients move forward with confidence and care tailored to their needs.
           </p>
+        </div>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">

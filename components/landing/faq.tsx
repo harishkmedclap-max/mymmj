@@ -3,14 +3,16 @@ import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
 const faqs = [
-  { q: "What is a Medical Cannabis Card in Pennsylvania and who needs it?",       a: "This card allows eligible patients to legally access medical cannabis within the state after approval for a qualifying medical condition." },
-  { q: "How do I know if I qualify for medical cannabis?",                        a: "A licensed physician will review your medical history and determine if you have a qualifying condition under Pennsylvania state law." },
-  { q: "How long does the evaluation and approval process usually take?",          a: "Most patients receive approval within 24 hours of their consultation. The state registration may take a few additional days." },
-  { q: "Do I need to visit a clinic in person for the evaluation?",               a: "No. All evaluations are conducted 100% online via secure video consultation from the comfort of your home." },
-  { q: "Can a licensed physician review my condition and guide me?",              a: "Yes. Our board-certified Pennsylvania physicians will thoroughly review your condition and provide personalized guidance." },
-  { q: "Is medical cannabis legal for registered patients in the state?",         a: "Yes. Pennsylvania has a legal medical marijuana program. Registered patients are fully protected under state law." },
-  { q: "Can someone apply on behalf of a minor or dependent patient?",            a: "Yes. A parent or legal guardian may apply on behalf of a minor patient. Additional documentation will be required." },
-  { q: "Will my medical information remain private during the evaluation?",       a: "Absolutely. Our platform is fully HIPAA-compliant and your medical information is kept strictly confidential." },
+  { q: "What is a Pennsylvania medical marijuana card, and who needs one?",       a: "A Pennsylvania medical marijuana card is an official card issued by the Pennsylvania Department of Health that allows certified patients to legally purchase and possess medical cannabis from state‑licensed dispensaries after they receive a physician’s certification." },
+  { q: "How do I qualify for a Pennsylvania medical marijuana card?",                        a: "You must be a Pennsylvania resident and have a serious medical condition certified by a physician approved to participate in the state’s Medical Marijuana Program. Conditions include anxiety disorders, chronic pain, cancer, PTSD, epilepsy, and more." },
+  { q: "Can I apply for a medical marijuana card in Pennsylvania online?",          a: "Yes. After you register on the state’s medical marijuana registry, you can complete your evaluation with a licensed physician via secure telehealth, and if certified, proceed with state registration." },
+  { q: "What is the cost to get a Pennsylvania medical marijuana card?",               a: "There are two main costs: a physician evaluation fee (varies) and a $50 state registration fee paid to the Pennsylvania Department of Health. Fee waivers may apply to certain assistance program participants, such as Medicaid or SNAP recipients." },
+  { q: "How long does it take to receive my Pennsylvania medical marijuana card?",              a: "After certification and payment of the state fee, the Department of Health typically prints and mails your card within 7–14 days." },
+  { q: "How long is a Pennsylvania medical marijuana card valid?",         a: "A Pennsylvania medical marijuana card is valid for one year from the date of issuance and must be renewed annually with a physician recertification." },
+  { q: "Where can I use my Pennsylvania medical marijuana card?",            a: "Once issued, you can purchase medical cannabis products from state‑licensed dispensaries throughout Pennsylvania; out‑of‑state medical cards are not accepted." },
+  { q: "What products can I buy with my Pennsylvania medical marijuana card?",       a: "Pennsylvania dispensaries offer regulated medical cannabis products such as tinctures, capsules, oils, vaporizable products, and other forms approved under state program rules." },
+  {q:"Do I need to pay sales tax on medical cannabis purchases in Pennsylvania?", a:"No. Medical cannabis purchases made with a valid Pennsylvania medical marijuana card are exempt from state sales tax, reducing costs compared with regular taxable purchases."},
+  {q:"Can I designate a caregiver to help me with my medical marijuana card?", a:"Yes. A patient can designate a caregiver who must also register with the Pennsylvania Medical Marijuana Program and complete a background check, allowing the caregiver to obtain medical cannabis on the patient’s behalf"},
 ];
 
 export default function Faq() {
@@ -24,12 +26,14 @@ export default function Faq() {
           <span className="inline-flex mx-auto border border-white/20 text-white/60 text-xs px-4 py-1.5 rounded-full w-fit">
             FAQ
           </span>
-          <h2 className="heading-secondary text-white">
-            Frequently Asked <span className="text-accent">Questions</span>
-          </h2>
-          <p className="text-muted-inv">
-            Everything you need to know about getting your medical marijuana card in Pennsylvania.
-          </p>
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="heading-secondary text-white">
+              Frequently Asked <span className="text-accent">Questions</span>
+            </h2>
+            <p className="text-muted-inv">
+              Everything you need to know about getting your medical marijuana card in Pennsylvania.
+            </p>
+          </div>
         </div>
 
         <div className="flex flex-col gap-2">

@@ -28,10 +28,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-        {/* Skip link — keyboard & screen reader users jump to content */}
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
         {children}
       </body>
     </html>
