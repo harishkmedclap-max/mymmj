@@ -6,10 +6,7 @@ export default function Doctors() {
   return (
     <section className="w-full bg-white py-12 px-4 md:px-8 lg:px-16">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
-
-       
-
-        <div className="flex-1 min-w-0 flex justify-center lg:justify-end relative">
+        <div className="flex-1 min-w-0 flex relative">
           <div className="absolute -top-4 -right-4 w-72 h-72 bg-teal-50 rounded-3xl -z-10" aria-hidden="true" />
           <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-teal-100 via-slate-200 to-slate-300 flex items-center justify-center">
             <Image src={expert} alt="Doctor consulting with patient" className="object-cover w-full h-full" sizes="(max-width: 1024px) 100vw, 50vw"/>
@@ -45,10 +42,10 @@ export default function Doctors() {
           </h2>
 
           <p className="text-muted mb-4">
-            Our network of experienced physicians specializes in medical cannabis evaluations, ensuring every patient receives personalized attention and comprehensive guidance throughout the application process. Each doctor is fully licensed in Pennsylvania and stays up to date with the latest state regulations.
+            Our network of highly qualified Pennsylvania medical marijuana doctors brings extensive clinical experience in evaluating patients for medical cannabis treatment. Each physician is fully licensed in Pennsylvania and fully understands the state guidelines, ensuring every evaluation is thorough, compliant, and rooted in medical expertise. Patients receive medically safe guidance and clear direction throughout the entire process.
           </p>
           <p className="text-muted mb-8">
-            We understand that seeking medical cannabis treatment is a significant decision. That's why our doctors take the time to thoroughly review your medical history, answer all your questions, and provide clear recommendations based on your individual health needs and qualifying conditions.
+            We understand that applying for a medical marijuana card in Pennsylvania is an important healthcare decision. That’s why our doctors take a detailed, patient-focused approach, carefully reviewing medical history and answering every question with clarity. Their goal is to provide informed, responsible recommendations tailored to your specific condition and long-term wellness needs.
           </p>
 
           <div className="flex flex-wrap gap-3" role="list" aria-label="Certifications">

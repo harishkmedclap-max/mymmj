@@ -9,7 +9,7 @@ const steps = [
 
 export default function Steps() {
   return (
-    <section id="process" className="min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 bg-[#0b2620]">
+    <section id="process" className="flex flex-col items-center justify-center px-4 py-16 sm:py-20 bg-[#0b2620]">
       {/* Heading */}
 
        <div className="text-center max-w-4xl mx-auto mb-12">
