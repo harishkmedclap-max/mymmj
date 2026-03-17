@@ -5,16 +5,25 @@ export default function BackToTop() {
   const [visible, setVisible] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  useEffect(() => {
-    const onScroll = () => {
-      const top = window.scrollY;
-      const height = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(height > 0 ? (top / height) * 100 : 0);
-      setVisible(top > 300);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+ useEffect(() => {
+  let ticking = false;
+  
+  const onScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const top = window.scrollY;
+        const height = document.documentElement.scrollHeight - window.innerHeight;
+        setProgress(height > 0 ? (top / height) * 100 : 0);
+        setVisible(top > 300);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+  
+  window.addEventListener("scroll", onScroll, { passive: true });
+  return () => window.removeEventListener("scroll", onScroll);
+}, []);
 
   const r = 20;
   const circ = 2 * Math.PI * r;
