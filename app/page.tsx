@@ -19,7 +19,7 @@
  * The total JS transferred is the same, but none of it blocks initial paint.
  */
 import dynamic from "next/dynamic";
-import Header from "@/components/header/header";
+import Header from "@/components/header/headerServer";
 import Hero from "@/components/landing/hero";       // hero already lazy-loads Form
 import Footer from "@/components/footer/footer";
 import BackToTop from "@/components/backtotop";

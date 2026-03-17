@@ -6,7 +6,7 @@ import logo from "@/public/assets/logo.png";
 
 const navLinks = ["Process", "Conditions", "Pricing", "FAQ"];
 
-export default function Header() {
+export default function HeaderClient() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
