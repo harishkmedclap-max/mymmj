@@ -67,6 +67,7 @@ export default function SpeakWithDoc() {
                 src={doctor}
                 alt="Doctor consulting with patient"
                 className="object-cover w-full h-full"
+                sizes="(max-width: 768px) 288px, 320px"
               />
               {/* Subtle inner top highlight */}
               <div

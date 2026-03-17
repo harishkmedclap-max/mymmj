@@ -20,7 +20,7 @@ export default function HeaderClient() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300
         ${scrolled
-          ? "backdrop-blur-md bg-white/70 border-b border-white/40 shadow-md"
+          ? "bg-white/95 border-b border-gray-200 shadow-md"
           : "bg-white border-b border-gray-100 shadow-sm"
         }`}
     >

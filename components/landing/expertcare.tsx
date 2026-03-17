@@ -47,7 +47,7 @@ export default function ExpertCare() {
         <div className="flex-1 min-w-0 flex justify-center lg:justify-end relative">
           <div className="absolute -top-4 -right-4 w-72 h-72 bg-teal-50 rounded-3xl -z-10" aria-hidden="true" />
           <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-teal-100 via-slate-200 to-slate-300 flex items-center justify-center">
-            <Image src={expert} alt="Doctor consulting with patient" className="object-cover w-full h-full" />
+            <Image src={expert} alt="Doctor consulting with patient" className="object-cover w-full h-full" sizes="(max-width: 1024px) 100vw, 50vw"/>
             <div className="absolute bottom-4 left-4 bg-white rounded-xl px-4 py-2 shadow-md flex items-center gap-2">
 
               <div className="w-8 h-8 rounded-full bg-teal-600 flex items-center justify-center shrink-0">

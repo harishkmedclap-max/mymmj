@@ -1,4 +1,3 @@
-import { BadgeCheck ,Clock , Stethoscope } from "lucide-react"
 /**
  * PERFORMANCE FIX: Import FormWrapper (lazy) instead of Form (eager).
  * This one line change moves react-hook-form + zod out of the critical bundle.
@@ -8,10 +7,33 @@ import { BadgeCheck ,Clock , Stethoscope } from "lucide-react"
 import FormWrapper from "@/components/landing/formwrapper";
 
 const features = [
-  { label: "HIPAA-Compliant", icon: BadgeCheck },
-  { label: "Money-Back Guarantee", icon: Clock },
-  { label: "Licensed Doctors", icon: Stethoscope },
+  {
+    label: "HIPAA-Compliant",
+    icon: () => (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
+      </svg>
+    ),
+  },
+  {
+    label: "Money-Back Guarantee",
+    icon: () => (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+      </svg>
+    ),
+  },
+  {
+    label: "Licensed Doctors",
+    icon: () => (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+        <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/>
+      </svg>
+    ),
+  },
 ];
+
 
 const heroList = [
   "Board-Certified Pennsylvania MMJ Doctors",
@@ -45,7 +67,7 @@ export default function Hero() {
               {features.map(({ label, icon: Icon }) => (
                 <div key={label} className="flex flex-col items-center gap-2">
                   <div className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20">
-                    <Icon size={20} className="text-[#34d399]" />
+                    <Icon className ="text-[#34d399]" />
                   </div>
                   <span className="text-xs font-medium text-white">{label}</span>
                 </div>

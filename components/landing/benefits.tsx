@@ -22,7 +22,7 @@ export default function Benefits() {
         {/* Image card */}
         <div className="relative w-full max-w-xs shrink-0 rounded-2xl overflow-hidden shadow-2xl">
           <div className="w-full aspect-[3/4] bg-gradient-to-b from-green-900 to-green-950 flex items-center justify-center">
-            <Image src={benefit} alt="Benefits" className="object-cover" />
+            <Image src={benefit} alt="Benefits" className="object-cover" sizes="(max-width: 1024px) 100vw, 320px"/>
           </div>
           <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm flex justify-around px-4 py-3">
             {statsOverlay.map(({ value, label }) => (
