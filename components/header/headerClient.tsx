@@ -32,6 +32,7 @@ export default function HeaderClient() {
           height={56}
           priority
           fetchPriority="high"
+          sizes="(max-width: 768px) 160px, 200px"
         />
 
         {/* Desktop Nav */}

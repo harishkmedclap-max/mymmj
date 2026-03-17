@@ -6,7 +6,7 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  display: "swap",
+  display: "optional",
   preload: true,
 });
 
@@ -27,6 +27,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={`${inter.variable} antialiased`}>
         {children}
       </body>
