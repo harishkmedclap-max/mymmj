@@ -32,6 +32,7 @@ export default function Benefits() {
               </div>
             ))}
           </div>
+         
         </div>
 
         {/* Content */}

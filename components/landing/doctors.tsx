@@ -1,6 +1,5 @@
 import expert from "@/public/assets/expert.jpg"
 import Image from "next/image";
-const badges = ["Board Certified", "HIPAA Compliant", "100% Legal"];
 
 export default function Doctors() {
   return (
@@ -35,7 +34,7 @@ export default function Doctors() {
 
           <h2 className="heading-secondary mb-4">
             Expert Care from{" "}
-            <span style={{ color: "#0d9488" }}>
+            <span className="text-accent">
               Licensed Pennsylvania Medical Professionals
             </span>
             {/* teal-600 (#0d9488) on white = 4.5:1 ✓ */}
@@ -48,18 +47,17 @@ export default function Doctors() {
             We understand that applying for a medical marijuana card in Pennsylvania is an important healthcare decision. That’s why our doctors take a detailed, patient-focused approach, carefully reviewing medical history and answering every question with clarity. Their goal is to provide informed, responsible recommendations tailored to your specific condition and long-term wellness needs.
           </p>
 
-          <div className="flex flex-wrap gap-3" role="list" aria-label="Certifications">
-            {badges.map((label) => (
-              <span key={label} role="listitem"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full border border-gray-300">
-                <svg className="w-3.5 h-3.5 text-teal-700 shrink-0" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <circle cx="8" cy="8" r="7" fill="currentColor" opacity="0.2" />
-                  <path d="M5 8.5l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                {label}
-              </span>
-            ))}
-          </div>
+           <a
+              href="#apply"
+              className="inline-flex items-center justify-center gap-2 mt-6 px-6 py-3 rounded-xl 
+                        text-sm font-semibold text-white 
+                        bg-[#047857] hover:bg-[#065f46] 
+                        transition-all duration-200 
+                        focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#047857]"
+            >
+              Apply for Your MMJ Card
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </a>
         </div>
       </div>
     </section>

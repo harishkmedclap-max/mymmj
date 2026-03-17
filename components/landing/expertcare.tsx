@@ -17,7 +17,7 @@ export default function ExpertCare() {
 
           <h2 className="heading-secondary mb-4">
             Expert Care from{" "}
-            <span style={{ color: "#0d9488" }}>
+            <span className="text-accent">
               Licensed Pennsylvania Medical Professionals
             </span>
             {/* teal-600 (#0d9488) on white = 4.5:1 ✓ */}

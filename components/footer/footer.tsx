@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from "lucide-react";
-import logo from "@/public/assets/LOGO PENSYLANIA.webp";
+import logo from "@/public/assets/logo.webp";
 import Image from "next/image";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "";
@@ -49,7 +49,7 @@ export default function Footer() {
             />
           </div>
           <p className="text-sm leading-relaxed text-white/80">
-            Trusted by thousands of Pennsylvania patients for secure, professional medical marijuana evaluations.
+            The United State's Trusted Medical Marijuana Evaluation Platform
           </p>
           <nav aria-label="Social media links">
             <div className="flex gap-2">
