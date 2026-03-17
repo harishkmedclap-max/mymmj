@@ -23,7 +23,7 @@ import Header from "@/components/header/headerServer";
 import Hero from "@/components/landing/hero";       // hero already lazy-loads Form
 import Footer from "@/components/footer/footer";
 import BackToTop from "@/components/backtotop";
-import Doctors from "@/components/landing/doctors";
+
 
 // Everything below the fold — lazy load
 // No loading skeleton needed for server components (they SSR fine);
@@ -35,6 +35,7 @@ const Stats        = dynamic(() => import("@/components/landing/stats"));
 const StartJourney = dynamic(() => import("@/components/landing/startjourney"));
 const Conditions   = dynamic(() => import("@/components/landing/conditions"));
 const Benefits     = dynamic(() => import("@/components/landing/benefits"));
+const Doctors      = dynamic(() => import("@/components/landing/doctors"));
 const Pricing      = dynamic(() => import("@/components/landing/pricing"));
 const Reviews      = dynamic(() => import("@/components/landing/reviews"));
 const Faq          = dynamic(() => import("@/components/landing/faq"));
