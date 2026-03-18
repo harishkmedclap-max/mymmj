@@ -5,19 +5,19 @@ import Image from "next/image";
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "";
 
 const quickLinks = [
-  { label: "How It Works",           href: `${BASE_URL}/#process`    },
-  { label: "Qualifying Conditions",  href: `${BASE_URL}/#conditions`  },
-  { label: "Pricing",                href: `${BASE_URL}/#pricing`     },
-  { label: "FAQ",                    href: `${BASE_URL}/#faq`         },
-  { label: "About Us",               href: `${BASE_URL}/#apply`       },
+  { label: "How It Works",           href: `${BASE_URL}/#process`   },
+  { label: "Qualifying Conditions",  href: `${BASE_URL}/#conditions`},
+  { label: "Pricing",                href: `${BASE_URL}/#pricing`   },
+  { label: "FAQ",                    href: `${BASE_URL}/#faq`       },
+  { label: "About Us",               href: `${BASE_URL}/#apply`     },
 ];
 
 const legalLinks = [
-  { label: "Privacy Policy",    href: `${BASE_URL}`    },
-  { label: "Terms of Service",  href: `${BASE_URL}`  },
-  { label: "HIPAA Compliance",  href: `${BASE_URL}`             },
+  { label: "Privacy Policy",    href: `${BASE_URL}` },
+  { label: "Terms of Service",  href: `${BASE_URL}` },
+  { label: "HIPAA Compliance",  href: `${BASE_URL}` },
   { label: "State Regulations", href: `${BASE_URL}` },
-  { label: "Disclaimer",        href: `${BASE_URL}`        },
+  { label: "Disclaimer",        href: `${BASE_URL}` },
 ];
 
 const socialIcons = [

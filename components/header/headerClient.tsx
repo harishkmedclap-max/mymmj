@@ -24,7 +24,7 @@ export default function HeaderClient() {
           : "bg-white border-b border-gray-100 shadow-sm"
         }`}
     >
-      <div className="max-w-7xl mx-auto py-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-3 lg:px-3 py-3 flex items-center justify-between">
         <Image
           src={logo}
           alt="Pennsylvania Medical Marijuana Card"
@@ -72,7 +72,7 @@ export default function HeaderClient() {
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
-          className="md:hidden flex items-center justify-center w-10 h-10 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
+          className="md:hidden flex items-center justify-end w-10 h-10 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
         >
           {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>

@@ -44,7 +44,7 @@ export default function Benefits() {
           <h2 className="heading-secondary text-white">
             Benefits of Your{" "}
             <span className="text-accent">Medical Cannabis Card</span>{" "}
-            in <span className="text-accent">Pennsylvania</span>
+            in Pennsylvania
           </h2>
 
           <p className="text-muted-inv">
@@ -56,13 +56,23 @@ export default function Benefits() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-1">
             {benefits.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="flex gap-3">
-                <div className="w-9 h-9 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5">
-                  <Icon className="w-4 h-4 text-emerald-400" strokeWidth={1.8} />
+              <div
+                key={title}
+                className="group flex gap-3 p-4 rounded-xl transition-all duration-300 
+                          hover:bg-white/5 hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+              >
+                <div className="w-9 h-9 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5 
+                                transition-all duration-300 group-hover:bg-emerald-500/30 group-hover:scale-110">
+                  <Icon className="w-4 h-4 text-emerald-400 transition-transform duration-300 group-hover:rotate-6" strokeWidth={1.8} />
                 </div>
+
                 <div>
-                  <p className="text-small font-semibold text-white">{title}</p>
-                  <p className="text-muted-inv mt-0.5">{desc}</p>
+                  <p className="text-small font-semibold text-white group-hover:text-emerald-300 transition-colors">
+                    {title}
+                  </p>
+                  <p className="text-muted-inv mt-0.5">
+                    {desc}
+                  </p>
                 </div>
               </div>
             ))}

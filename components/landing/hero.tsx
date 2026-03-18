@@ -69,7 +69,7 @@ export default function Hero() {
                   <div className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20">
                     <Icon className ="text-[#34d399]" />
                   </div>
-                  <span className="text-xs font-medium text-white">{label}</span>
+                  <span className="text-xs font-medium text-white text-center">{label}</span>
                 </div>
               ))}
             </div>

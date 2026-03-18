@@ -9,15 +9,22 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="w-full bg-white py-8 px-4 shadow-sm">
-      <div className="max-w-4xl mx-auto flex flex-wrap justify-center md:justify-between gap-8">
+    <section className="w-full bg-white py-8 sm:py-10 px-4 sm:px-6 lg:px-16 shadow-sm">
+      <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-4 md:gap-8">
         {stats.map(({ icon: Icon, value, label }) => (
-          <div key={label} className="flex flex-col items-center gap-2 min-w-[100px]">
-            <div className="w-12 h-12 rounded-full bg-[#10b981] flex items-center justify-center">
-              <Icon className="w-5 h-5 text-white" strokeWidth={1.8} />
+          <div
+            key={label}
+            className="flex flex-col items-center gap-2 sm:gap-2.5"
+          >
+            <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-[#059669] flex items-center justify-center shrink-0">
+              <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" strokeWidth={1.8} />
             </div>
-            <span className="text-2xl font-extrabold text-gray-900 leading-none">{value}</span>
-            <span className="text-muted text-center">{label}</span>
+            <span className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 leading-none">
+              {value}
+            </span>
+            <span className="text-xs sm:text-sm text-gray-500 text-center leading-snug">
+              {label}
+            </span>
           </div>
         ))}
       </div>
