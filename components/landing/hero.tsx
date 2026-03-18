@@ -45,18 +45,18 @@ export default function Hero() {
   return (
     <section className="w-full bg-[linear-gradient(135deg,#033c3f_0%,#002124_100%)] pt-28 pb-12 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start">
+        <div className="flex px-4 flex-col md:flex-row gap-8 md:gap-10 items-start">
 
           {/* Left */}
           <div className="flex-1 min-w-0">
             <span className="relative inline-flex items-center border border-[#ffffff33] rounded-full py-1.5 pr-4 pl-7 text-white text-xs font-semibold tracking-wide bg-[#ffffff15]">
-              <span className="absolute left-3 w-1.5 h-1.5 rounded-full bg-[#34d399]" aria-hidden="true" />
+              <span className="absolute left-3 w-1.5 h-1.5 rounded-full bg-[#20B780]" aria-hidden="true" />
               Pennsylvania Licensed Physicians
             </span>
 
             <h1 className="heading-primary text-white mt-3 mb-4">
               Apply for a Pennsylvania Medical Marijuana Card{" "}
-              <span style={{ color: "#34d399" }}>Online Today</span>
+              <span className = "text-accent">Online Today</span>
             </h1>
 
             <p className="text-body-inv max-w-lg">

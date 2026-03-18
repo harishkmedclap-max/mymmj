@@ -4,7 +4,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-accent: #10b981;
+  --color-accent: #20B780;
   --color-heading: #1f2937;
   --color-muted: #6b7280;
   --color-body: #374151;
@@ -78,7 +78,7 @@ button { cursor: pointer; }
     color: #4b5563; /* gray-600 — 7:1 on white ✓ */
   }
 
-  .text-accent { color: #059669; } /* emerald-600 — 4.5:1 on white ✓ was #10b981 (2.9:1 fail) */
+  .text-accent { color: #20B780; } /* emerald-600 — 4.5:1 on white ✓ was #10b981 (2.9:1 fail) */
 
   /* Inverted — dark backgrounds (#0d2e2a, #0b2620, #1a3a35) */
   .heading-primary-inv {

@@ -98,7 +98,7 @@ export default function ExpertCare() {
 
               {/* Overlay badge */}
               <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-white rounded-lg sm:rounded-xl px-3 sm:px-4 py-1.5 sm:py-2 shadow-md flex items-center gap-2">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#059669] flex items-center justify-center shrink-0">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#20B780] flex items-center justify-center shrink-0">
                   <svg
                     className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"
                     viewBox="0 0 24 24"

@@ -48,22 +48,11 @@ export default function Conditions() {
               key={condition}
               className="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 bg-white hover:shadow-sm transition-shadow"
             >
-              <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" strokeWidth={2} />
+              <CheckCircle2 className="w-5 h-5 text-[#20B780] shrink-0" strokeWidth={2} />
               <span className="text-small font-medium text-gray-700">{condition}</span>
             </div>
           ))}
         </div>
-        {/* <div className="">
-          <p className="text-muted">
-            Note: The following list includes medical conditions approved as a 
-            <em>“serious medical condition limited to Chapter 20 research purposes only”</em> under the act:
-          </p>
-
-          <ul className="list-disc list-inside mt-2 text-muted">
-            <li>Moderate to Severe Traumatic Brain Injury (TBI) with chronic symptoms</li>
-            <li>Type II Diabetes Mellitus</li>
-          </ul>
-        </div>    */}
       </div>
     </section>
   );

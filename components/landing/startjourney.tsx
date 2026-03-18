@@ -29,7 +29,7 @@ export default function StartJourney() {
        
         <div className="flex flex-wrap justify-center gap-3">
           <a href="#apply"
-            className="inline-flex items-center gap-2 border border-white/50 text-[#059669] bg-[#FFFFFF] text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0d2e2a] transition-colors">
+            className="inline-flex items-center gap-2 border border-white/50 text-[#20B780] bg-[#FFFFFF] text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0d2e2a] transition-colors">
             Schedule Consultation <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </a>
           <a href="#process"

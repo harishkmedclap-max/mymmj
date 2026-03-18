@@ -127,7 +127,7 @@ export default function Form() {
         <div className="pb-2">
           <label className="flex items-start gap-2.5 cursor-pointer">
             <input id="terms" type="checkbox" {...register("terms")}
-              className="mt-0.5 w-4 h-4 accent-[#059669] cursor-pointer" />
+              className="mt-0.5 w-4 h-4 cursor-pointer" />
             {/* CONTRAST FIX: text-xs → text-sm, color darkened */}
             <span className="text-sm text-[#1f2937] leading-relaxed">
               I accept the <span className="underline">Terms and Conditions</span> <span aria-hidden="true">*</span>
@@ -139,7 +139,7 @@ export default function Form() {
         <div className="pb-5">
           <label className="flex items-start gap-2.5 cursor-pointer">
             <input id="marketing" type="checkbox" {...register("marketing")}
-              className="mt-0.5 w-4 h-4 accent-[#059669] cursor-pointer" />
+              className="mt-0.5 w-4 h-4  cursor-pointer" />
             <span className="text-sm text-[#374151] leading-relaxed">
               I agree to receive emails with educational updates and latest offers.
             </span>
@@ -153,7 +153,7 @@ export default function Form() {
             type="submit"
             disabled={isSubmitting}
             aria-busy={isSubmitting}
-            className="bg-[#059669] text-white px-8 py-3 rounded-md text-sm font-semibold hover:bg-[#047857] focus:outline-none focus:ring-2 focus:ring-[#059669] focus:ring-offset-2 transition-colors disabled:opacity-60"
+            className="bg-[#20B780] text-white px-8 py-3 rounded-md text-sm font-semibold hover:bg-[#1daa70] focus:outline-none focus:ring-2 focus:ring-[#20B780] focus:ring-offset-2 transition-colors disabled:opacity-60"
           >
             {isSubmitting ? "Submitting…" : "Apply for Your MMJ Card"}
           </button>

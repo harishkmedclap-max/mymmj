@@ -16,7 +16,7 @@ export default function Stats() {
             key={label}
             className="flex flex-col items-center gap-2 sm:gap-2.5"
           >
-            <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-[#059669] flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-[#20B780] flex items-center justify-center shrink-0">
               <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" strokeWidth={1.8} />
             </div>
             <span className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 leading-none">

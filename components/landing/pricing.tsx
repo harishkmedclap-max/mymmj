@@ -2,8 +2,8 @@ import { Check } from "lucide-react";
 
 const plans = [
   {
-    name: "New Patient",
-    price: "$199",
+    name: "New MMJ Card",
+    price: "$149",
     desc: "Complete evaluation & certification",
     popular: true,
     ctaLabel: "Apply Your MMJ Card",
@@ -17,8 +17,8 @@ const plans = [
     ],
   },
   {
-    name: "Renewal",
-    price: "$149",
+    name: "Card Renewal",
+    price: "$129",
     desc: "Annual card renewal",
     popular: false,
     ctaLabel: "Renew Your MMJ Card Now",
@@ -70,7 +70,7 @@ export default function Pricing() {
               )}
 
               <div className="flex flex-col gap-1">
-                <div className="w-8 h-8 rounded-full bg-[#059669] flex items-center justify-center mb-2" aria-hidden="true">
+                <div className="w-8 h-8 rounded-full bg-[#20B780] flex items-center justify-center mb-2" aria-hidden="true">
                   <Check className="w-4 h-4 text-white" strokeWidth={2.5} />
                 </div>
                 <p className="text-sm font-semibold text-gray-700">{name}</p>
@@ -81,7 +81,7 @@ export default function Pricing() {
               <ul className="flex flex-col gap-2" aria-label={`${name} features`}>
                 {features.map((f) => (
                   <li key={f} className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-[#059669] shrink-0 mt-0.5" strokeWidth={2.5} aria-hidden="true" />
+                    <Check className="w-4 h-4 text-[#20B780] shrink-0 mt-0.5" strokeWidth={2.5} aria-hidden="true" />
                     <span className="text-sm text-gray-700">{f}</span>
                   </li>
                 ))}

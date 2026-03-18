@@ -54,7 +54,7 @@ export default function HeaderClient() {
             href="tel:800-123-4567"
             className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors"
           >
-            <Phone className="w-4 h-4 text-emerald-600" strokeWidth={2} />
+            <Phone className="w-4 h-4 text-[#20B780]" strokeWidth={2} />
             800-123-4567
           </a>
           <a
@@ -87,16 +87,16 @@ export default function HeaderClient() {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 onClick={() => setMenuOpen(false)}
-                className="text-sm font-medium text-gray-700 py-3 border-b border-gray-50 hover:text-emerald-600 transition-colors"
+                className="text-sm font-medium text-gray-700 py-3 border-b border-gray-50 hover:text-[#20B780] transition-colors"
               >
                 {item}
               </a>
             ))}
             <a
               href="tel:800-123-4567"
-              className="flex items-center gap-2 text-sm font-medium text-gray-700 py-3 border-b border-gray-50 hover:text-emerald-600 transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-gray-700 py-3 border-b border-gray-50 hover:text-[#20B780] transition-colors"
             >
-              <Phone className="w-4 h-4 text-emerald-600" strokeWidth={2} />
+              <Phone className="w-4 h-4 text-[#20B780]" strokeWidth={2} />
               800-123-4567
             </a>
             <a
