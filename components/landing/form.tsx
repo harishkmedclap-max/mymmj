@@ -161,9 +161,9 @@ export default function Form() {
 
         {/* CONTRAST FIX: text-[11px] text-gray-400 fails at this size
             → text-xs text-gray-600                                        */}
-        <p className="text-center text-xs text-gray-600 mt-4 font-medium">
+        {/* <p className="text-center text-xs text-gray-600 mt-4 font-medium">
           🔒 HIPAA Compliant & 100% Secure
-        </p>
+        </p> */}
       </form>
     </div>
   );

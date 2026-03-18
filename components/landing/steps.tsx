@@ -18,7 +18,7 @@ const steps = [
   {
     id: 3,
     icon: FileText,
-    title: "Attend Your MMJ Evaluation",
+    title: "Attend MMJ Evaluation",
     description:
       "Meet with a licensed MMJ Doctor Pennsylvania through a secure virtual consultation to review your medical history and qualifying condition.",
   },
@@ -61,13 +61,13 @@ export default function Steps() {
                       hover:bg-[#16352c] hover:shadow-xl hover:-translate-y-2"
           >
             <div className="flex items-start justify-between mb-4">
-              <div
+              {/* <div
                 className="w-10 h-10 rounded-full bg-[#2db882] flex items-center justify-center shrink-0
                               transition-all duration-300 
                               group-hover:scale-110 group-hover:rotate-6"
               >
                 <Icon size={18} className="text-white" />
-              </div>
+              </div> */}
 
               <span
                 className="text-5xl font-bold text-white leading-none 

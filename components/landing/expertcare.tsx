@@ -12,13 +12,13 @@ export default function ExpertCare() {
         <div className="w-full lg:flex-1 lg:min-w-0">
 
           {/* Badge */}
-          <span className="inline-flex items-center gap-1.5 bg-teal-50 text-teal-800 text-[11px] sm:text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4 sm:mb-5 border border-teal-200">
+          {/* <span className="inline-flex items-center gap-1.5 bg-teal-50 text-teal-800 text-[11px] sm:text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4 sm:mb-5 border border-teal-200">
             <span
               className="w-1.5 h-1.5 rounded-full bg-teal-600 inline-block"
               aria-hidden="true"
             />
             Expert Care
-          </span>
+          </span> */}
 
           {/* Heading */}
           <h2 className="heading-secondary">

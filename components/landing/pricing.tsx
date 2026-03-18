@@ -39,10 +39,9 @@ export default function Pricing() {
       <div className="max-w-3xl mx-auto flex flex-col items-center gap-10">
 
         <div className="flex flex-col items-center gap-3 text-center">
-          <span className="border border-white/30 text-white/90 text-xs font-semibold px-4 py-1.5 rounded-full">
-            {/* CONTRAST FIX: white/60 on dark = 3.2:1 fail → white/90 = 9.1:1 ✓ */}
+          {/* <span className="border border-white/30 text-white/90 text-xs font-semibold px-4 py-1.5 rounded-full">
             ✦ SIMPLE PRICING
-          </span>
+          </span> */}
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="heading-secondary pb-2.5 text-white">
               Transparent Pricing You {" "}
@@ -61,13 +60,11 @@ export default function Pricing() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
           {plans.map(({ name, price, desc, popular, ctaLabel, ctaHref, features }) => (
             <div key={name} className="relative bg-white text-gray-800 rounded-2xl p-7 flex flex-col gap-5 shadow-xl">
-              {popular && (
-                /* CONTRAST FIX: text-[10px] white on emerald-500 = 2.9:1 fail
-                   → text-xs font-bold on emerald-700 (#047857) = 5.1:1 ✓     */
+              {/* {popular && (
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#047857] text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
                   ★ Most Popular
                 </span>
-              )}
+              )} */}
 
               <div className="flex flex-col gap-1">
                 <div className="w-8 h-8 rounded-full bg-[#20B780] flex items-center justify-center mb-2" aria-hidden="true">

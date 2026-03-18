@@ -35,11 +35,11 @@ const features = [
 ];
 
 
-const heroList = [
-  "Board-Certified Pennsylvania MMJ Doctors",
-  "HIPAA-compliant secure consultations",
-  "Money-back guarantee if not approved",
-];
+// const heroList = [
+//   "Board-Certified Pennsylvania MMJ Doctors",
+//   "HIPAA-compliant secure consultations",
+//   "Money-back guarantee if not approved",
+// ];
 
 export default function Hero() {
   return (
@@ -49,10 +49,10 @@ export default function Hero() {
 
           {/* Left */}
           <div className="flex-1 min-w-0">
-            <span className="relative inline-flex items-center border border-[#ffffff33] rounded-full py-1.5 pr-4 pl-7 text-white text-xs font-semibold tracking-wide bg-[#ffffff15]">
+            {/* <span className="relative inline-flex items-center border border-[#ffffff33] rounded-full py-1.5 pr-4 pl-7 text-white text-xs font-semibold tracking-wide bg-[#ffffff15]">
               <span className="absolute left-3 w-1.5 h-1.5 rounded-full bg-[#20B780]" aria-hidden="true" />
               Pennsylvania Licensed Physicians
-            </span>
+            </span> */}
 
             <h1 className="heading-primary text-white mt-3 mb-4">
               Apply for a Pennsylvania Medical Marijuana Card{" "}
@@ -60,7 +60,11 @@ export default function Hero() {
             </h1>
 
             <p className="text-body-inv max-w-lg">
-              Connect with licensed physicians to get evaluated for your medical marijuana card Pennsylvania through our secure telehealth platform.
+              Get evaluated by licensed physicians and apply for your medical marijuana card Pennsylvania through our secure telehealth platform.
+            </p>
+
+            <p className="text-body-inv max-w-lg">
+              In Full Compliance with the Pennsylvania Department of Health Medical Marijuana Program. Providing evaluations that meet all state-mandated legal, clinical, and ethical standards
             </p>
 
             <div className="flex gap-6 py-6">
@@ -74,11 +78,11 @@ export default function Hero() {
               ))}
             </div>
 
-            <ul className="list-disc pl-5 space-y-2" aria-label="Key benefits">
+            {/* <ul className="list-disc pl-5 space-y-2" aria-label="Key benefits">
               {heroList.map((item) => (
                 <li key={item} className="text-sm text-white/90 marker:text-[#34d399]">{item}</li>
               ))}
-            </ul>
+            </ul> */}
           </div>
 
           {/* Right — Lazy Form (splits RHF+Zod out of critical bundle) */}

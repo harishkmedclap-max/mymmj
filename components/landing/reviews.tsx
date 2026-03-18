@@ -41,16 +41,16 @@ export default function Reviews() {
 
         <div className="flex flex-col items-center gap-3 text-center">
           {/* CONTRAST FIX: text-emerald-600 on bg-emerald-50 = 3.1:1 fail → emerald-800 = 6.9:1 ✓ */}
-          <span className="border border-emerald-300 bg-emerald-50 text-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full">
+          {/* <span className="border border-emerald-300 bg-emerald-50 text-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full">
             Patient Reviews
-          </span>
+          </span> */}
           <div className="text-center max-w-4xl mx-auto">
           <h2 className="heading-secondary pb-2.5">
              What Our Patients {" "}
             <span className="text-accent"> Are Saying</span>
           </h2>
           <p className="text-muted max-w-3xl mx-auto">
-            Licensed physicians provide personalized evaluations and guidance, helping patients move forward with confidence and care tailored to their needs.
+            Real patient feedback highlights the clear guidance our physicians provide, helping patients feel confident and supported throughout the evaluation process.
           </p>
         </div>
 

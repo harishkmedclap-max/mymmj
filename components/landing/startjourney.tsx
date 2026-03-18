@@ -11,11 +11,10 @@ export default function StartJourney() {
     <section className="w-full bg-[#0d2e2a] py-16 px-4">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-6">
 
-        <span className="inline-flex items-center gap-1.5 border border-white/40 text-white text-xs font-semibold px-4 py-1.5 rounded-full">
-          {/* CONTRAST FIX: white/80 → white (full opacity) */}
+        {/* <span className="inline-flex items-center gap-1.5 border border-white/40 text-white text-xs font-semibold px-4 py-1.5 rounded-full">
           <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" aria-hidden="true" />
           Start Your Journey Today
-        </span>
+        </span> */}
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="heading-secondary pb-2.5 text-white">
             Connect With a Doctor for Your {" "}

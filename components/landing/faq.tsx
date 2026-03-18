@@ -23,9 +23,9 @@ export default function Faq() {
       <div className="max-w-2xl mx-auto flex flex-col gap-8">
 
         <div className="text-center flex flex-col gap-2">
-          <span className="inline-flex mx-auto border border-white/20 text-white/60 text-xs px-4 py-1.5 rounded-full w-fit">
+          {/* <span className="inline-flex mx-auto border border-white/20 text-white/60 text-xs px-4 py-1.5 rounded-full w-fit">
             FAQ
-          </span>
+          </span> */}
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="heading-secondary text-white">
               Frequently Asked <span className="text-accent">Questions</span>

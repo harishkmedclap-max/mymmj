@@ -50,9 +50,9 @@ export default function Benefits() {
         <div className="flex-1 min-w-0 flex flex-col gap-4 sm:gap-5 order-1 lg:order-2">
 
           {/* Badge */}
-          <span className="inline-flex w-fit border border-white/20 text-white/70 text-[11px] sm:text-xs px-4 py-1.5 rounded-full">
+          {/* <span className="inline-flex w-fit border border-white/20 text-white/70 text-[11px] sm:text-xs px-4 py-1.5 rounded-full">
             Patient Benefits
-          </span>
+          </span> */}
 
           {/* Heading */}
           <h2 className="heading-secondary text-white">
@@ -67,11 +67,11 @@ export default function Benefits() {
             cannabis from state-licensed dispensaries operating under the Pennsylvania Medical
             Marijuana Program.
           </p>
-          <p className="text-sm sm:text-base text-white/60 leading-relaxed">
+          {/* <p className="text-sm sm:text-base text-white/60 leading-relaxed">
             The program is designed to provide patients with access to regulated cannabis products
             while ensuring evaluations and recommendations are made by certified physicians in
             accordance with state guidelines.
-          </p>
+          </p> */}
 
           {/* Benefits grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-1">
