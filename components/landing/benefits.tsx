@@ -55,7 +55,7 @@ export default function Benefits() {
           </span>
 
           {/* Heading */}
-          <h2 className="heading-secondary">
+          <h2 className="heading-secondary text-white">
             Benefits of Your{" "}
             <span className="text-accent">Medical Cannabis Card</span>{" "}
             in Pennsylvania

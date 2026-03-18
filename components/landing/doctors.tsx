@@ -1,5 +1,10 @@
 import expert from "@/public/assets/expert.jpg";
 import Image from "next/image";
+const heroList = [
+  "Schedule your renewal evaluation and submit your updated medical information.",
+  "Consult with a Pennsylvania-licensed physician via secure telehealth to confirm continued eligibility.",
+  "Receive your renewed certification in the state system and complete any required state steps to stay active.",
+];
 
 export default function Doctors() {
   return (
@@ -63,28 +68,28 @@ export default function Doctors() {
 
           {/* Heading */}
           <h2 className="heading-secondary">
-            Expert Care from{" "}
+            How to Renew Your Pennsylvania {" "}
             <span className="text-accent">
-              Licensed Pennsylvania Medical Professionals
+              Medical Marijuana Card
             </span>
           </h2>
 
           {/* Body copy */}
           <p className="text-muted mb-4 sm:mb-6">
-            Our network of highly qualified Pennsylvania medical marijuana doctors brings extensive
-            clinical experience in evaluating patients for medical cannabis treatment. Each physician
-            is fully licensed in Pennsylvania and fully understands the state guidelines, ensuring
-            every evaluation is thorough, compliant, and rooted in medical expertise. Patients receive
-            medically safe guidance and clear direction throughout the entire process.
+            Renewing your Pennsylvania medical marijuana card is simple and can be completed entirely online, ensuring you maintain uninterrupted access to your treatment.
           </p>
-          <p className="text-muted mb-4 sm:mb-6">
+          {/* <p className="text-muted mb-4 sm:mb-6">
             We understand that applying for a medical marijuana card in Pennsylvania is an important
             healthcare decision. That's why our doctors take a detailed, patient-focused approach,
             carefully reviewing medical history and answering every question with clarity. Their goal
             is to provide informed, responsible recommendations tailored to your specific condition
             and long-term wellness needs.
-          </p>
-
+          </p> */}
+          <ul className="list-disc pl-5 space-y-2 mb-7" aria-label="Key benefits">
+              {heroList.map((item) => (
+                <li key={item} className="text-sm text-muted marker:text-[#34d399]">{item}</li>
+              ))}
+            </ul>
           {/* CTA Button */}
           <a
             href="#apply"
