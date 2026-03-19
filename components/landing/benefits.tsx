@@ -1,12 +1,15 @@
-import { Leaf, Heart, Users, Shield } from "lucide-react";
-import benefit from "@/public/assets/benefits.jpg";
+import Possesion from "@/public/assets/benefit/possession_limts.webp";
+import Sales from "@/public/assets/benefit/sales_tax_examption.webp";
+import Legal from "@/public/assets/benefit/legal_protection.webp";
+import potent from "@/public/assets/benefit/potent_products.webp";
+import benefit from "@/public/assets/benefit/benefits.webp";
 import Image from "next/image";
 
 const benefits = [
-  { icon: Leaf,   title: "Possession Limits",   desc: "Patients may legally possess a 30-day supply of medical marijuana, as certified by their physician, ensuring full compliance with Pennsylvania law." },
-  { icon: Heart,  title: "Sales Tax Exemption", desc: "Registered patients do not pay state sales tax on medical marijuana purchases from licensed dispensaries, reducing treatment costs." },
-  { icon: Users,  title: "Potent Products",     desc: "Patients can purchase high-quality, lab-tested, and potent medical cannabis products from state-licensed dispensaries, ensuring safe and effective treatment." },
-  { icon: Shield, title: "Legal Protection",    desc: "A valid Pennsylvania MMJ card allows patients to legally purchase, possess, and use medical cannabis for approved medical conditions, protecting them from state penalties." },
+  { img: Possesion,   title: "Possession Limits",   desc: "Patients may legally possess a 30-day supply of medical marijuana, as certified by their physician, ensuring full compliance with Pennsylvania law." },
+  { img: Sales,  title: "Sales Tax Exemption", desc: "Registered patients do not pay state sales tax on medical marijuana purchases from licensed dispensaries, reducing treatment costs." },
+  { img: potent,  title: "Potent Products",     desc: "Patients can purchase high-quality, lab-tested, and potent medical cannabis products from state-licensed dispensaries, ensuring safe and effective treatment." },
+  { img: Legal, title: "Legal Protection",    desc: "A valid Pennsylvania MMJ card allows patients to legally purchase, possess, and use medical cannabis for approved medical conditions, protecting them from state penalties." },
 ];
 
 const statsOverlay = [
@@ -75,18 +78,15 @@ export default function Benefits() {
 
           {/* Benefits grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-1">
-            {benefits.map(({ icon: Icon, title, desc }) => (
+            {benefits.map(({ img, title, desc }) => (
               <div
                 key={title}
                 className="group flex gap-3 p-3 sm:p-4 rounded-xl transition-all duration-300
                            hover:bg-white/5 hover:shadow-lg hover:-translate-y-1 cursor-pointer"
               >
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5
-                                transition-all duration-300 group-hover:bg-emerald-500/30 group-hover:scale-110">
-                  <Icon
-                    className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 transition-transform duration-300 group-hover:rotate-6"
-                    strokeWidth={1.8}
-                  />
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center shrink-0 mt-0.5
+                                transition-all duration-300group-hover:scale-110">
+                    <Image src={img} alt={title} width={40} height={30} />
                 </div>
 
                 <div>

@@ -5,7 +5,9 @@
  * FILE LOCATION: src/components/landing/hero.tsx
  */
 import FormWrapper from "@/components/landing/formwrapper";
-import Hippa from "@/public/assets/HIPAA-Compliant.webp";
+import Hippa from "@/public/assets/hero/hippa_compliant_1.webp";
+import MoneyBack from "@/public/assets/hero/money_back_gurantee.webp";
+import Licensed from "@/public/assets/hero/licensed_doctor_1.webp";
 import Image from "next/image";
 const features = [
   {
@@ -14,11 +16,11 @@ const features = [
   },
   {
     label: "Money-Back Guarantee",
-    icon: Hippa
+    icon: MoneyBack
   },
   {
     label: "Licensed Doctors",
-      icon: Hippa
+      icon: Licensed
   },
 ];
 
@@ -58,15 +60,15 @@ export default function Hero() {
             <div className="flex gap-6 py-6">
               {features.map(({ label, icon }) => (
                 <div key={label} className="flex flex-col items-center gap-2">
-                  <div className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20">
+                  {/* <div className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20"> */}
                     <Image
                       src={icon}
                       alt={label}
-                      width={30}
-                      height={20}
+                      width={40}
+                      height={30}
                       className="object-contain"
                     />
-                  </div>
+                  {/* </div> */}
                   <span className="text-xs font-medium text-white text-center">
                     {label}
                   </span>

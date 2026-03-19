@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import formicon from "@/public/assets/form-top-icon.png";
+import formicon from "@/public/assets/hero/get_started_today.webp";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormSchemaType, formSchema } from "@/lib/formSchema";
@@ -76,7 +76,7 @@ export default function Form() {
   return (
     <div id="apply" className="shadow-[0px_10px_30px_0px_#0000001a] bg-white rounded-xl px-9 py-8">
       <div className="flex flex-col items-center gap-1 pb-6">
-        <Image src={formicon} alt="" width={50} height={50} sizes="50px" aria-hidden="true" />
+        <Image src={formicon} alt="form Icon" width={40} height={30} sizes="50px" aria-hidden="true" />
         <h2 className="heading-tertiary" style={{ fontSize: "1.375rem" }}>Get Started Today</h2>
         <p className="text-muted text-center">Begin your medical marijuana evaluation for Pennsylvania by completing the form below.</p>
       </div>

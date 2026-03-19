@@ -1,30 +1,34 @@
-import { User, Calendar, FileText, Mail } from "lucide-react";
+import CreateAccount from "@/public/assets/steps/create_your_account.webp";
+import MMJEval from "@/public/assets/steps/attend_mmj_evaluation.webp";
+import ScheduleConsultation from "@/public/assets/steps/schedule_consultation.webp";
+import Registerwithstate from "@/public/assets/steps/register_with_the_State.webp";
 
+import Image from "next/image";
 const steps = [
   {
     id: 1,
-    icon: User,
+    icon: CreateAccount,
     title: "Create Your Account",
     description:
       "Sign up and provide your basic information to begin your medical marijuana card Pennsylvania evaluation process.",
   },
   {
     id: 2,
-    icon: Calendar,
+    icon: ScheduleConsultation,
     title: "Schedule Consultation",
     description:
       "Choose a convenient time to speak with our licensed medical cannabis doctor for your health evaluation.",
   },
   {
     id: 3,
-    icon: FileText,
+    icon: MMJEval,
     title: "Attend MMJ Evaluation",
     description:
       "Meet with a licensed MMJ Doctor Pennsylvania through a secure virtual consultation to review your medical history and qualifying condition.",
   },
   {
     id: 4,
-    icon: Mail,
+    icon: Registerwithstate,
     title: "Register with the State",
     description:
       "If approved, your physician certification is submitted to the Pennsylvania Department of Health, allowing you to complete your Medical Cannabis Card in Pennsylvania.",
@@ -58,24 +62,12 @@ export default function Steps() {
             key={id}
             className="group rounded-2xl p-6 bg-[#112921] flex flex-col 
                       transition-all duration-300 cursor-pointer
+                      border-t-[3px] border-t-[#2db882]
+                      ring-1 ring-[#2db882]/15
                       hover:bg-[#16352c] hover:shadow-xl hover:-translate-y-2"
           >
-            <div className="flex items-start justify-between mb-4">
-              {/* <div
-                className="w-10 h-10 rounded-full bg-[#2db882] flex items-center justify-center shrink-0
-                              transition-all duration-300 
-                              group-hover:scale-110 group-hover:rotate-6"
-              >
-                <Icon size={18} className="text-white" />
-              </div> */}
-
-              <span
-                className="text-5xl font-bold text-white leading-none 
-                              transition-all duration-300 
-                              group-hover:text-[#2db882] group-hover:scale-110"
-              >
-                {id}
-              </span>
+            <div className="mb-4">
+                <Image src={Icon} alt="" width={40} height={30} className="object-contain" />
             </div>
 
             <h3

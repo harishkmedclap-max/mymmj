@@ -1,8 +1,11 @@
 import { Check } from "lucide-react";
-
+import newCard from "@/public/assets/pricing/new_mmj_card.webp";
+import renewal from "@/public/assets/pricing/card_renewal.webp";
+import Image from "next/image";
 const plans = [
   {
     name: "New MMJ Card",
+    img: newCard,
     price: "$149",
     desc: "Complete evaluation & certification",
     popular: true,
@@ -18,6 +21,7 @@ const plans = [
   },
   {
     name: "Card Renewal",
+    img: renewal,
     price: "$129",
     desc: "Annual card renewal",
     popular: false,
@@ -58,7 +62,7 @@ export default function Pricing() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
-          {plans.map(({ name, price, desc, popular, ctaLabel, ctaHref, features }) => (
+          {plans.map(({ name, img, price, desc, popular, ctaLabel, ctaHref, features }) => (
             <div key={name} className="relative bg-white text-gray-800 rounded-2xl p-7 flex flex-col gap-5 shadow-xl">
               {/* {popular && (
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#047857] text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
@@ -67,9 +71,10 @@ export default function Pricing() {
               )} */}
 
               <div className="flex flex-col gap-1">
-                <div className="w-8 h-8 rounded-full bg-[#20B780] flex items-center justify-center mb-2" aria-hidden="true">
-                  <Check className="w-4 h-4 text-white" strokeWidth={2.5} />
-                </div>
+                {/* <div className="w-8 h-8 rounded-full bg-[#20B780] flex items-center justify-center mb-2" aria-hidden="true"> */}
+                  {/* <Check className="w-4 h-4 text-white" strokeWidth={2.5} /> */}
+                  <Image src={img} alt={name} width={40} height={30} />
+                {/* </div> */}
                 <p className="text-sm font-semibold text-gray-700">{name}</p>
                 <p className="text-4xl font-extrabold text-gray-900">{price}</p>
                 <p className="text-sm text-gray-600">{desc}</p>

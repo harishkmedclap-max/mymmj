@@ -1,9 +1,13 @@
 import { Clock, Shield, FileText, Star, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import consultation from "@/public/assets/startjourney/24_hour_appointments.webp";
+import process from "@/public/assets/startjourney/100_confidential_1.webp";
+import doctor from "@/public/assets/startjourney/licensed_doctor.webp";
 
 const features = [
-  { icon: Clock,    title: "24 Hour Appointments", desc: "Quick scheduling available" },
-  { icon: Shield,   title: "100% Confidential",    desc: "HIPAA compliant platform"   },
-  { icon: FileText, title: "Licensed Doctors",     desc: "PA certified physicians"    },
+  { img: consultation,    title: "24 Hour Appointments", desc: "Quick scheduling available" },
+  { img: process,   title: "100% Confidential",    desc: "HIPAA compliant platform"   },
+  { img: doctor, title: "Licensed Doctors",     desc: "PA certified physicians"    },
 ];
 
 export default function StartJourney() {
@@ -38,10 +42,10 @@ export default function StartJourney() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full mt-2" role="list">
-          {features.map(({ icon: Icon, title, desc }) => (
+          {features.map(({ img, title, desc }) => (
             <div key={title} role="listitem"
               className="bg-white/8 border border-white/20 rounded-xl p-5 flex flex-col items-center gap-2 text-center">
-              <Icon className="w-5 h-5 text-white/80" strokeWidth={1.5} aria-hidden="true" />
+              <Image src={img} alt={title} width={40} height={30} />
               {/* CONTRAST FIX: white/50 on dark bg → text-muted-inv (white/75) */}
               <p className="text-sm font-semibold text-white">{title}</p>
               <p className="text-muted-inv">{desc}</p>

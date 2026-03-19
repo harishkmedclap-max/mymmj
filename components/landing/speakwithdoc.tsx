@@ -1,11 +1,13 @@
 import { Calendar, Monitor, Shield, ArrowRight } from "lucide-react";
 import doctor from "@/public/assets/speakwithDoctor.png"
 import Image from "next/image";
-
+import appointment from "@/public/assets/speakwithdoctor/schedule_consultation.webp";
+import onlineProcess from "@/public/assets/speakwithdoctor/onlineprocress.webp";
+import doctors from "@/public/assets/speakwithdoctor/licensed_doctors_2.webp";
 const features = [
-  { icon: Calendar, title: "Same-Day Appointments Available", desc: "Get started immediately with our flexible scheduling"},
-  { icon: Monitor,  title: "100% Online Process",             desc: "No in-person visits required"},
-  { icon: Shield,   title: "Licensed PA Physicians",          desc: "Board-Certified medical marijuana doctors"},
+  { img: appointment, title: "Same-Day Appointments Available", desc: "Get started immediately with our flexible scheduling"},
+  { img: onlineProcess,  title: "100% Online Process",             desc: "No in-person visits required"},
+  { img: doctors,   title: "Licensed PA Physicians",          desc: "Board-Certified medical marijuana doctors"},
 ];
 
 export default function SpeakWithDoc() {
@@ -25,11 +27,11 @@ export default function SpeakWithDoc() {
           </p>
 
           <div className="flex flex-col gap-3">
-            {features.map(({ icon: Icon, title, desc }) => (
+            {features.map(({ img, title, desc }) => (
               <div key={title} className="flex items-center gap-4 bg-[#1a3a35] rounded-xl px-4 py-3">
-                <div className="w-9 h-9 rounded-lg bg-emerald-500/20 flex items-center justify-center shrink-0">
-                  <Icon className="w-4 h-4 text-emerald-400" strokeWidth={1.8} />
-                </div>
+                {/* <div className="w-9 h-9 rounded-lg bg-emerald-500/20 flex items-center justify-center shrink-0"> */}
+                  <Image src={img} alt={title} width={30} height={20} />
+                {/* </div> */}
                 <div>
                   <p className="text-small font-semibold text-white leading-none">{title}</p>
                   <p className="text-muted-inv mt-0.5">{desc}</p>
