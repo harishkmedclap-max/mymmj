@@ -13,7 +13,7 @@ const STATE = {
   timezone: "EST",
 } as const;
 
-const UTM_SOURCE = "organic"; // change as needed
+const UTM_SOURCE = "medicalmarijuanacardpennsylvania"; // change as needed
 
 const inputClass =
   "w-full border border-[#d1d5db] p-[13px] rounded-md mt-1.5 text-sm text-gray-800 placeholder:text-[#6b7280] outline-none focus:border-[#033c3f] focus:ring-2 focus:ring-[#033c3f]/30 transition";
