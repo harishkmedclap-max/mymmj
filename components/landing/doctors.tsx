@@ -1,4 +1,4 @@
-import expert from "@/public/assets/expert.jpg";
+import doctorimage from "@/public/assets/doctor-section.jpeg";
 import Image from "next/image";
 const heroList = [
   "Schedule your renewal evaluation and submit your updated medical information.",
@@ -9,7 +9,7 @@ const heroList = [
 export default function Doctors() {
   return (
     <section className="w-full bg-white py-10 sm:py-14 lg:py-20 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-14 xl:gap-20">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-14 xl:gap-20">
 
         {/* ── LEFT: Image Card — appears after text on mobile, left on desktop ── */}
         <div className="w-full sm:w-4/5 md:w-3/4 lg:flex-1 lg:min-w-0 flex justify-center lg:justify-start order-2 lg:order-1">
@@ -24,7 +24,7 @@ export default function Doctors() {
             {/* Image container */}
             <div className="relative w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl bg-gradient-to-br from-teal-100 via-slate-200 to-slate-300">
               <Image
-                src={expert}
+                src={doctorimage}
                 alt="Doctor consulting with patient"
                 className="object-cover w-full h-full"
                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 75vw, 50vw"
@@ -87,7 +87,7 @@ export default function Doctors() {
           </p> */}
           <ul className="list-disc pl-5 space-y-2 mb-7" aria-label="Key benefits">
               {heroList.map((item) => (
-                <li key={item} className="text-sm text-muted marker:text-[#34d399]">{item}</li>
+                <li key={item} className="text-sm text-muted marker:text-[#20B780]">{item}</li>
               ))}
             </ul>
           {/* CTA Button */}

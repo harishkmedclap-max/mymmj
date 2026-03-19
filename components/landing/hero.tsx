@@ -5,32 +5,20 @@
  * FILE LOCATION: src/components/landing/hero.tsx
  */
 import FormWrapper from "@/components/landing/formwrapper";
-
+import Hippa from "@/public/assets/HIPAA-Compliant.webp";
+import Image from "next/image";
 const features = [
   {
     label: "HIPAA-Compliant",
-    icon: (props: React.SVGProps<SVGSVGElement>) => (
-      <svg {...props} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
-      </svg>
-    ),
+    icon : Hippa
   },
   {
     label: "Money-Back Guarantee",
-    icon: (props: React.SVGProps<SVGSVGElement>) => (
-      <svg {...props} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-      </svg>
-    ),
+    icon: Hippa
   },
   {
     label: "Licensed Doctors",
-    icon: (props: React.SVGProps<SVGSVGElement>) => (
-      <svg {...props} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
-        <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/>
-      </svg>
-    ),
+      icon: Hippa
   },
 ];
 
@@ -68,12 +56,20 @@ export default function Hero() {
             </p>
 
             <div className="flex gap-6 py-6">
-              {features.map(({ label, icon: Icon }) => (
+              {features.map(({ label, icon }) => (
                 <div key={label} className="flex flex-col items-center gap-2">
                   <div className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20">
-                    <Icon className ="text-[#34d399]" />
+                    <Image
+                      src={icon}
+                      alt={label}
+                      width={30}
+                      height={20}
+                      className="object-contain"
+                    />
                   </div>
-                  <span className="text-xs font-medium text-white text-center">{label}</span>
+                  <span className="text-xs font-medium text-white text-center">
+                    {label}
+                  </span>
                 </div>
               ))}
             </div>

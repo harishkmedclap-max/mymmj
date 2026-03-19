@@ -52,7 +52,7 @@ export default function Steps() {
         </p>
       </div>
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-6xl mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-7xl mb-10">
         {steps.map(({ id, icon: Icon, title, description }) => (
           <div
             key={id}

@@ -18,7 +18,7 @@ const statsOverlay = [
 export default function Benefits() {
   return (
     <section className="w-full bg-[#0d2e2a] py-10 sm:py-14 lg:py-20 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20">
-      <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-14 xl:gap-16">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-14 xl:gap-16">
 
         {/* ── Image Card — below content on mobile, left on desktop ── */}
         <div className="w-full sm:w-3/4 md:w-2/3 lg:w-72 xl:w-80 shrink-0 order-2 lg:order-1 flex justify-center lg:block">

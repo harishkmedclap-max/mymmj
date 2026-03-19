@@ -1,4 +1,4 @@
-import expert from "@/public/assets/expert.jpg";
+import expert from "@/public/assets/speakwithDoctor.png";
 import Image from "next/image";
 
 const badges = ["Board Certified", "HIPAA Compliant", "100% Legal"];
@@ -6,7 +6,7 @@ const badges = ["Board Certified", "HIPAA Compliant", "100% Legal"];
 export default function ExpertCare() {
   return (
     <section className="w-full bg-white py-10 sm:py-14 lg:py-20 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-14 xl:gap-20">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-14 xl:gap-20">
 
         {/* ── LEFT: Text Content ── */}
         <div className="w-full lg:flex-1 lg:min-w-0">

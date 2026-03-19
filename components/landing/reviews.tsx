@@ -37,7 +37,7 @@ function Stars() {
 export default function Reviews() {
   return (
     <section className="w-full bg-gradient-to-b from-white to-green-50 py-16 px-4">
-      <div className="max-w-5xl mx-auto flex flex-col items-center gap-10">
+      <div className="max-w-7xl mx-auto flex flex-col items-center gap-10">
 
         <div className="flex flex-col items-center gap-3 text-center">
           {/* CONTRAST FIX: text-emerald-600 on bg-emerald-50 = 3.1:1 fail → emerald-800 = 6.9:1 ✓ */}

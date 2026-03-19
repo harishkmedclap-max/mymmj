@@ -49,9 +49,9 @@ export default function Pricing() {
             </h2>
             <p className="text-muted-inv">
               Our pricing structure is  {" "}
-              <span style={{ color: "#34d399" }}>transparent and patient-focused.</span>{" "}
+              <span style={{ color: "#20B780" }}>transparent and patient-focused.</span>{" "}
               You’ll see the full cost of your
-              <span style={{ color: "#34d399" }}> medical marijuana </span>{" "}
+              <span style={{ color: "#20B780" }}> medical marijuana </span>{" "}
               evaluation upfront, helping you move forward with confidence.
             </p>
           </div>

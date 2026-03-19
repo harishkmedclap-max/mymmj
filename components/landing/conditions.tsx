@@ -30,7 +30,7 @@ const conditions = [
 export default function Conditions() {
   return (
     <section id="conditions" className="w-full bg-gradient-to-b from-white to-green-50 py-16 px-4">
-      <div className="max-w-6xl mx-auto flex flex-col items-center gap-6">
+      <div className="max-w-7xl mx-auto flex flex-col items-center gap-6">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="heading-secondary pb-2.5">
              Conditions That Qualify for a Medical{" "}
