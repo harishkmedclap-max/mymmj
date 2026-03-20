@@ -1,5 +1,5 @@
-import { CheckCircle2 } from "lucide-react";
-
+import Image from "next/image";
+import checkIcon from "@/public/assets/commonicons/check.webp";
 const conditions = [
   "Amyotrophic lateral sclerosis",
   "Anxiety disorders",
@@ -48,7 +48,7 @@ export default function Conditions() {
               key={condition}
               className="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 bg-white hover:shadow-sm transition-shadow"
             >
-              <CheckCircle2 className="w-5 h-5 text-[#20B780] shrink-0" strokeWidth={2} />
+              <Image src={checkIcon} alt="Check" width={20} height={20} className="flex-shrink-0" />
               <span className="text-small font-medium text-gray-700">{condition}</span>
             </div>
           ))}

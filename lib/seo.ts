@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 export const SITE_CONFIG = {
   name: "Pennsylvania Medical Marijuana Card",
-  url: "https://www.yoursite.com",          // ← replace with your real domain
+  url: "https://mymmj.vercel.app",          // ← replace with your real domain
   twitterHandle: "@YourHandle",             // ← replace with your Twitter handle
   defaultOgImage: "/assets/og-default.jpg", // ← create a 1200×630 image here
   locale: "en_US",

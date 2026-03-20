@@ -1,5 +1,6 @@
-import { Quote } from "lucide-react";
-
+// import { Quote } from "lucide-react";
+import Quote from "@/public/assets/commonicons/colon.webp";
+import Image from "next/image";
 const reviews = [
   {
     text: "The entire process was so simple and professional. I got my Pennsylvania medical marijuana card approved within days. The doctor was knowledgeable and really took time to understand my condition.",
@@ -60,7 +61,7 @@ export default function Reviews() {
           {reviews.map(({ text, name, location, date }) => (
             <article key={name} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4">
               <Stars />
-              <Quote className="w-6 h-6 text-[#20B780]" strokeWidth={1.5} aria-hidden="true" />
+              <Image src={Quote} alt="Quote" width={24} height={24} className="object-contain" />
               <p className="text-sm text-gray-700 leading-relaxed flex-1">{text}</p>
               <footer>
                 <p className="text-sm font-bold text-gray-900">{name}</p>

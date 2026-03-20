@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
-
+import plus from "@/public/assets/commonicons/plus.webp";
+import minus from "@/public/assets/commonicons/minus.webp";
+import Image from "next/image";
 const faqs = [
   { q: "What is a Pennsylvania medical marijuana card, and who needs one?",       a: "A Pennsylvania medical marijuana card is an official card issued by the Pennsylvania Department of Health that allows certified patients to legally purchase and possess medical cannabis from state‑licensed dispensaries after they receive a physician’s certification." },
   { q: "How do I qualify for a Pennsylvania medical marijuana card?",                        a: "You must be a Pennsylvania resident and have a serious medical condition certified by a physician approved to participate in the state’s Medical Marijuana Program. Conditions include anxiety disorders, chronic pain, cancer, PTSD, epilepsy, and more." },
@@ -45,11 +46,25 @@ export default function Faq() {
                 aria-expanded={open === i}
               >
                 <span className="text-small font-medium text-white/90">{q}</span>
-                <span className="shrink-0 w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center">
-                  {open === i
-                    ? <Minus className="w-3 h-3 text-white" strokeWidth={2.5} />
-                    : <Plus  className="w-3 h-3 text-white" strokeWidth={2.5} />}
-                </span>
+                {/* <span className="shrink-0 w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center"> */}
+                  {open === i ? (
+                    <Image
+                      src={minus}
+                      alt="Collapse"
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
+                  ) : (
+                    <Image
+                      src={plus}
+                      alt="Expand"
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
+                  )}
+                {/* </span> */}
               </button>
 
               {open === i && (

@@ -1,6 +1,12 @@
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from "lucide-react";
 import logo from "@/public/assets/logo.webp";
 import Image from "next/image";
+import facebook from "@/public/assets/social/facebook.webp";
+import twitter from "@/public/assets/social/twiter.webp";
+import instagram from "@/public/assets/social/instagram.webp";
+import telephone from "@/public/assets/social/phone.webp";
+import mail from "@/public/assets/social/email.webp";
+import location from "@/public/assets/social/location.webp";
+// import footerBg from "@/public/assets/leafs.png"; 
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "";
 
@@ -21,15 +27,15 @@ const legalLinks = [
 ];
 
 const socialIcons = [
-  { label: "Facebook on social media", icon: Facebook, href: "https://facebook.com" },
-  { label: "Twitter on social media",  icon: Twitter,  href: "https://twitter.com"  },
-  { label: "Instagram on social media",icon: Instagram, href: "https://instagram.com"},
+  { label: "Facebook on social media", img: facebook, href: "https://facebook.com" },
+  { label: "Twitter on social media",  img: twitter,  href: "https://twitter.com"  },
+  { label: "Instagram on social media",img: instagram, href: "https://instagram.com"},
 ];
 
 const contacts = [
-  { icon: Phone,  primary: "1-800-123-4567",       secondary: "Mon-Fri 9AM-5PM EST" },
-  { icon: Mail,   primary: "support@pammjcard.com", secondary: "24/7 Email Support"  },
-  { icon: MapPin, primary: "All of Pennsylvania",   secondary: "100% Online Service" },
+  { img: telephone,  primary: "1-800-123-4567",       secondary: "Mon-Fri 9AM-5PM EST" },
+  { img: mail,   primary: "support@pammjcard.com", secondary: "24/7 Email Support"  },
+  { img: location, primary: "All of Pennsylvania",   secondary: "100% Online Service" },
 ];
 
 export default function Footer() {
@@ -53,17 +59,26 @@ export default function Footer() {
           </p>
           <nav aria-label="Social media links">
             <div className="flex gap-2">
-              {socialIcons.map(({ label, icon: Icon, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition"
-                >
-                  <Icon className="w-4 h-4 text-white/80" strokeWidth={1.8} aria-hidden="true" />
-                </a>
+              {socialIcons.map(({ label, img, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mr-4 inline-block transition-all duration-300"
+              >
+                <Image
+                  src={img}
+                  alt={label}
+                  width={28}
+                  height={28}
+                  className="object-contain transition-all duration-300 ease-out
+                            group-hover:-translate-y-1 
+                            group-hover:scale-110 
+                            group-hover:rotate-[10deg]
+                            group-hover:drop-shadow-[0_8px_15px_rgba(16,185,129,0.5)]"
+                />
+              </a>
               ))}
             </div>
           </nav>
@@ -104,9 +119,22 @@ export default function Footer() {
         <div>
           <p className="text-white font-semibold text-sm mb-3">Contact Us</p>
           <address className="not-italic flex flex-col gap-3">
-            {contacts.map(({ icon: Icon, primary, secondary }) => (
-              <div key={primary} className="flex items-start gap-2">
-                <Icon className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" strokeWidth={1.8} aria-hidden="true" />
+            {contacts.map(({ img, primary, secondary }) => (
+              <div
+                key={primary}
+                className="group flex items-start gap-3 cursor-pointer transition-all duration-300"
+              >
+                <Image
+                  src={img}
+                  alt={primary}
+                  width={22}
+                  height={22}
+                  className="object-contain transition-all duration-300 ease-out
+                            group-hover:-translate-y-1
+                            group-hover:scale-110
+                            group-hover:rotate-[10deg]
+                            group-hover:drop-shadow-[0_8px_15px_rgba(16,185,129,0.5)]"
+                />
                 <div>
                   <p className="text-sm text-white font-medium">{primary}</p>
                   <p className="text-sm text-white/75">{secondary}</p>

@@ -1,7 +1,14 @@
 import expert from "@/public/assets/speakwithDoctor.png";
 import Image from "next/image";
+import Hippa from "@/public/assets/expertcare/hippa_Compliant.webp";
+import Legel from "@/public/assets/expertcare/100_Legal.webp";
+import Board from "@/public/assets/expertcare/Board_Certified.webp";
 
-const badges = ["Board Certified", "HIPAA Compliant", "100% Legal"];
+const badges = [
+  { label: "Board Certified", image: Board },
+  { label: "HIPAA Compliant", image: Hippa },
+  { label: "100% Legal", image: Legel },
+];
 
 export default function ExpertCare() {
   return (
@@ -40,27 +47,21 @@ export default function ExpertCare() {
             role="list"
             aria-label="Certifications"
           >
-            {badges.map((label) => (
+            {badges.map(({ label, image }) => (
               <span
                 key={label}
                 role="listitem"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full border border-gray-300"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-gray-700 
+                          bg-gray-100 px-3 py-1.5 rounded-full border border-gray-300
+                          transition-all duration-300 hover:bg-gray-200 hover:shadow-sm"
               >
-                <svg
-                  className="w-3.5 h-3.5 text-teal-700 shrink-0"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <circle cx="8" cy="8" r="7" fill="currentColor" opacity="0.2" />
-                  <path
-                    d="M5 8.5l2 2 4-4"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <Image
+                  src={image}
+                  alt={label}
+                  width={20}
+                  height={20}
+                  className="object-contain"
+                />
                 {label}
               </span>
             ))}

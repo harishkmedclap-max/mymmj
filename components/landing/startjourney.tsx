@@ -1,4 +1,3 @@
-import { Clock, Shield, FileText, Star, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import consultation from "@/public/assets/startjourney/24_hour_appointments.webp";
 import process from "@/public/assets/startjourney/100_confidential_1.webp";
@@ -33,7 +32,7 @@ export default function StartJourney() {
         <div className="flex flex-wrap justify-center gap-3">
           <a href="#apply"
             className="inline-flex items-center gap-2 border border-white/50 text-[#20B780] bg-[#FFFFFF] text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0d2e2a] transition-colors">
-            Schedule Consultation <ArrowRight className="w-4 h-4" aria-hidden="true" />
+            Schedule Consultation →
           </a>
           <a href="#process"
             className="bg-white/15 text-white text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-white/25 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0d2e2a] transition-colors">
