@@ -1,4 +1,4 @@
-import expert from "@/public/assets/speakwithDoctor.png";
+import expert from "@/public/assets/expertcare.webp";
 import Image from "next/image";
 import Hippa from "@/public/assets/expertcare/hippa_Compliant.webp";
 import Legel from "@/public/assets/expertcare/100_Legal.webp";
