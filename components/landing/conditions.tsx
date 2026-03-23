@@ -48,7 +48,7 @@ export default function Conditions() {
               key={condition}
               className="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 bg-white hover:shadow-sm transition-shadow"
             >
-              <Image src={checkIcon} alt="Check" width={20} height={20} className="flex-shrink-0" />
+              <Image src={checkIcon} alt="Check" width={20} height={20} className="flex-shrink-0" style={{height:"auto",width:"auto"}} />
               <span className="text-small font-medium text-gray-700">{condition}</span>
             </div>
           ))}

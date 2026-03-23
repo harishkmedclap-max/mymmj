@@ -61,7 +61,7 @@ export const metadata: Metadata = buildMetadata({
       default: "Pennsylvania Medical Marijuana Card | Online Doctor Evaluations",
       template: `%s | ${SITE_CONFIG.name}`,
     },
-    icons: { icon: "/assets/logo.png" },
+    icons: { icon: "/assets/pennsylvania.webp" },
   },
 });
 

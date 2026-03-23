@@ -44,7 +44,7 @@ export default function StartJourney() {
           {features.map(({ img, title, desc }) => (
             <div key={title} role="listitem"
               className="bg-white/8 border border-white/20 rounded-xl p-5 flex flex-col items-center gap-2 text-center">
-              <Image src={img} alt={title} width={40} height={30} />
+              <Image src={img} alt={title} width={40} height={30} style={{height:"auto",width:"auto"}}/>
               {/* CONTRAST FIX: white/50 on dark bg → text-muted-inv (white/75) */}
               <p className="text-sm font-semibold text-white">{title}</p>
               <p className="text-muted-inv">{desc}</p>

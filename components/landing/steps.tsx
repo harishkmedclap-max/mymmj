@@ -67,7 +67,7 @@ export default function Steps() {
                       hover:bg-[#16352c] hover:shadow-xl hover:-translate-y-2"
           >
             <div className="mb-4">
-                <Image src={Icon} alt="" width={40} height={30} className="object-contain" />
+                <Image src={Icon} alt="" width={40} height={30} className="object-contain" style={{height:"auto",width:"auto"}}/>
             </div>
 
             <h3

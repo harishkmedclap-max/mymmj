@@ -60,6 +60,7 @@ export default function ExpertCare() {
                   alt={label}
                   width={20}
                   height={20}
+                  style={{height:"auto",width:"auto"}}
                   className="object-contain"
                 />
                 {label}
@@ -82,6 +83,7 @@ export default function ExpertCare() {
             <div className="relative w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl bg-gradient-to-br from-teal-100 via-slate-200 to-slate-300">
               <Image
                 src={expert}
+                style={{height:"auto",width:"auto"}}
                 alt="Doctor consulting with patient"
                 className="object-cover w-full h-full"
                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 75vw, 50vw"

@@ -31,6 +31,7 @@ export default function Benefits() {
                 src={benefit}
                 alt="Benefits of Pennsylvania Medical Marijuana Card"
                 className="object-cover w-full h-full"
+                style={{height:"auto",width:"auto"}}
                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 66vw, 320px"
               />
             </div>
@@ -86,7 +87,7 @@ export default function Benefits() {
               >
                 <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center shrink-0 mt-0.5
                                 transition-all duration-300group-hover:scale-110">
-                    <Image src={img} alt={title} width={40} height={30} />
+                    <Image src={img} alt={title} width={40} height={30} style={{height:"auto",width:"auto"}} />
                 </div>
 
                 <div>

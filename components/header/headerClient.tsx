@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Image from "next/image";
-import logo from "@/public/assets/logo.png";
+import logo from "@/public/assets/pennsylvania.webp";
 
 const navLinks = ["Process", "Conditions", "Pricing", "FAQ"];
 

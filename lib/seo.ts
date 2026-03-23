@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   name: "Pennsylvania Medical Marijuana Card",
   url: "https://mymmj.vercel.app",          // ← replace with your real domain
   twitterHandle: "@YourHandle",             // ← replace with your Twitter handle
-  defaultOgImage: "/assets/og-default.jpg", // ← create a 1200×630 image here
+  defaultOgImage: "/assets/og-default.webp", // ← create a 1200×630 image here
   locale: "en_US",
 } as const;
 

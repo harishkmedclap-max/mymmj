@@ -26,6 +26,7 @@ export default function Doctors() {
               <Image
                 src={doctorimage}
                 alt="Doctor consulting with patient"
+                style={{height:"auto",width:"auto"}}
                 className="object-cover w-full h-full"
                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 75vw, 50vw"
               />

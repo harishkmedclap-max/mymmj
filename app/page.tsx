@@ -69,7 +69,7 @@ const organizationSchema = {
   "@type": "MedicalOrganization",
   name: "Pennsylvania Medical Marijuana Card",
   url: SITE_CONFIG.url,
-  logo: `${SITE_CONFIG.url}/assets/logo.png`,
+  logo: `${SITE_CONFIG.url}/assets/pennsylvania.webp`,
   description:
     "Board-certified Pennsylvania Medical Marijuana Doctors providing online MMJ card " +
     "certifications to qualifying Pennsylvania patients.",

@@ -66,6 +66,7 @@ export default function Hero() {
                       alt={label}
                       width={40}
                       height={30}
+                      style={{height:"auto",width:"auto"}}
                       className="object-contain"
                     />
                   {/* </div> */}

@@ -30,7 +30,7 @@ export default function SpeakWithDoc() {
             {features.map(({ img, title, desc }) => (
               <div key={title} className="flex items-center gap-4 bg-[#1a3a35] rounded-xl px-4 py-3">
                 {/* <div className="w-9 h-9 rounded-lg bg-emerald-500/20 flex items-center justify-center shrink-0"> */}
-                  <Image src={img} alt={title} width={30} height={20} />
+                  <Image src={img} alt={title} width={30} height={20} style={{height:"auto",width:"auto"}}/>
                 {/* </div> */}
                 <div>
                   <p className="text-small font-semibold text-white leading-none">{title}</p>
@@ -68,6 +68,7 @@ export default function SpeakWithDoc() {
               <Image
                 src={doctor}
                 alt="Doctor consulting with patient"
+                style={{height:"auto",width:"auto"}}
                 className="object-cover w-full h-full"
                 sizes="(max-width: 768px) 288px, 320px"
               />
