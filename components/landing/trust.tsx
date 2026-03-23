@@ -40,7 +40,7 @@ export default function Trust() {
                         transition-shadow duration-300"
             >
             <div className=" mb-2">
-                <Image src={img} alt={title} width={40} height={30} className="object-contain" style={{height:"auto",width:"auto"}}/>
+                <Image src={img} alt={title} width={40} height={30} className="object-contain"/>
               
             </div>
             <h3 className="heading-quaternary mb-2.5">{title}</h3>

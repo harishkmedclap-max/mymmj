@@ -73,7 +73,7 @@ export default function Pricing() {
               <div className="flex flex-col gap-1">
                 {/* <div className="w-8 h-8 rounded-full bg-[#20B780] flex items-center justify-center mb-2" aria-hidden="true"> */}
                   {/* <Check className="w-4 h-4 text-white" strokeWidth={2.5} /> */}
-                  <Image src={img} alt={name} width={40} height={30} style={{height:"auto",width:"auto"}}/>
+                  <Image src={img} alt={name} width={40} height={30} />
                 {/* </div> */}
                 <p className="text-sm font-semibold text-gray-700">{name}</p>
                 <p className="text-4xl font-extrabold text-gray-900">{price}</p>

@@ -21,7 +21,7 @@ export default function Stats() {
             className="flex flex-col items-center gap-2 sm:gap-2.5"
           >
             {/* <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-[#20B780] flex items-center justify-center shrink-0"> */}
-              <Image src={img} alt={label} width={50} height={40} style={{height:"auto",width:"auto"}}/>
+              <Image src={img} alt={label} width={50} height={40} />
             {/* </div> */}
             <span className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 leading-none">
               {value}

@@ -4,16 +4,12 @@
  *
  * FILE LOCATION: src/components/landing/hero.tsx
  */
-// import FormWrapper from "@/components/landing/formwrapper";
+import FormWrapper from "@/components/landing/formwrapper";
 import Hippa from "@/public/assets/hero/hippa_compliant_1.webp";
 import MoneyBack from "@/public/assets/hero/money_back_gurantee.webp";
 import Licensed from "@/public/assets/hero/licensed_doctor_1.webp";
 import Image from "next/image";
-import dynamic from "next/dynamic";
-const FormWrapper = dynamic(
-  () => import("@/components/landing/formwrapper"),
-  { ssr: false } // 🔥 key
-);
+
 const features = [
   {
     label: "HIPAA-Compliant",
@@ -71,7 +67,6 @@ export default function Hero() {
                       alt={label}
                       width={40}
                       height={30}
-                      style={{height:"auto",width:"auto"}}
                       className="object-contain"
                     />
                   {/* </div> */}

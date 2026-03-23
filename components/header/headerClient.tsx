@@ -72,7 +72,7 @@ export default function HeaderClient() {
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
-          className="md:hidden flex items-center justify-end w-10 h-10 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
+          className="md:hidden flex items-center justify-start w-10 h-10 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
         >
           {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>

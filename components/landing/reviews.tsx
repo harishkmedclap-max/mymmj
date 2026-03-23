@@ -61,7 +61,7 @@ export default function Reviews() {
           {reviews.map(({ text, name, location, date }) => (
             <article key={name} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4">
               <Stars />
-              <Image src={Quote} alt="Quote" width={24} height={24} className="object-contain" style={{height:"auto",width:"auto"}}/>
+              <Image src={Quote} alt="Quote" width={24} height={24} className="object-contain" />
               <p className="text-sm text-gray-700 leading-relaxed flex-1">{text}</p>
               <footer>
                 <p className="text-sm font-bold text-gray-900">{name}</p>

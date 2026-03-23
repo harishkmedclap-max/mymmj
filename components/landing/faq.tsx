@@ -52,14 +52,12 @@ export default function Faq() {
                       src={minus}
                       alt="Collapse"
                       width={20}
-                      style={{height:"auto",width:"auto"}}
                       height={20}
                       className="object-contain"
                     />
                   ) : (
                     <Image
                       src={plus}
-                      style={{height:"auto",width:"auto"}}
                       alt="Expand"
                       width={20}
                       height={20}

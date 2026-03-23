@@ -48,7 +48,6 @@ export default function Footer() {
               alt="Pennsylvania Medical Marijuana Card"
               width={200}
               height={56}
-              style={{height:"auto",width:"auto"}}
               priority
               fetchPriority="high"
               sizes="(max-width: 768px) 160px, 200px"
@@ -72,7 +71,6 @@ export default function Footer() {
                   alt={label}
                   width={28}
                   height={28}
-                  style={{height:"auto",width:"auto"}}
                   className="object-contain transition-all duration-300 ease-out
                             group-hover:-translate-y-1 
                             group-hover:scale-110 
@@ -130,7 +128,6 @@ export default function Footer() {
                   alt={primary}
                   width={22}
                   height={22}
-                  style={{height:"auto",width:"auto"}}
                   className="object-contain transition-all duration-300 ease-out
                             group-hover:-translate-y-1
                             group-hover:scale-110

@@ -31,7 +31,6 @@ export default function Benefits() {
                 src={benefit}
                 alt="Benefits of Pennsylvania Medical Marijuana Card"
                 className="object-cover w-full h-full"
-                style={{height:"auto",width:"auto"}}
                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 66vw, 320px"
               />
             </div>
