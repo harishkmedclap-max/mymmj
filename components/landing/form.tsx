@@ -78,7 +78,7 @@ export default function Form() {
       <div className="flex flex-col items-center gap-1 pb-6">
         <Image src={formicon} alt="form Icon" width={40} height={30} sizes="50px" aria-hidden="true"/>
         <h2 className="heading-tertiary" style={{ fontSize: "1.375rem" }}>Get Started Today</h2>
-        <p className="text-muted text-center">Begin your medical marijuana evaluation for Pennsylvania by completing the form below.</p>
+        <p className="text-muted text-center">Begin your medical xyz evaluation for Pennsylvania by completing the form below.</p>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
